@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "008163 红利研究采集器",
+  "version": "0.2.0",
+  "description": "在已登录的小红书页面中低频收录红利基金研究笔记，断点续读并导出本地 JSON。",
+  "permissions": ["activeTab", "alarms", "storage", "tabs"],
+  "host_permissions": ["https://www.xiaohongshu.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "008163 红利研究采集器",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.xiaohongshu.com/*"],
+      "js": ["extractors.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
   define: {
-    __APP_VERSION__: JSON.stringify("v18"),
+    __APP_VERSION__: JSON.stringify("v19"),
     __RELEASE_TIME__: JSON.stringify(releaseTime),
   },
   build: {

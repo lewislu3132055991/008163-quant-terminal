@@ -17,6 +17,20 @@ export interface CommunityResearchSnapshot {
   deepRead: number;
   queries: string[];
   rules: CommunityRule[];
+  sources: CommunitySourceRecord[];
+}
+
+export interface CommunitySourceRecord {
+  id: string;
+  title: string;
+  author: string;
+  url: string;
+  observedAt: string;
+  depth: "title-screened" | "deep-read";
+  formulaDisclosure: "open" | "partial" | "closed";
+  decision: "adapted" | "shadow" | "rejected";
+  claim: string;
+  review: string;
 }
 
 export interface ProductPattern {
@@ -72,10 +86,10 @@ export const productPatterns: ProductPattern[] = [
 ];
 
 export const communityResearch: CommunityResearchSnapshot = {
-  version: "1.1",
+  version: "1.2",
   updatedAt: "2026-08-06",
-  titleScreened: 40,
-  deepRead: 9,
+  titleScreened: 61,
+  deepRead: 11,
   queries: [
     "红利择时",
     "红利低波择时",
@@ -83,6 +97,10 @@ export const communityResearch: CommunityResearchSnapshot = {
     "红利基金250日线",
     "红利基金金叉死叉",
     "红利股债利差",
+    "红利低波资金因子",
+    "红利低波AI工具",
+    "红利低波周线RSI",
+    "红利估值择时",
   ],
   rules: [
     {
@@ -136,8 +154,35 @@ export const communityResearch: CommunityResearchSnapshot = {
       stage: "rejected",
       communityClaim: "把MA250当作唯一开关。",
       terminalUse: "拒绝进入建议系统。",
-      validation: "容易错过长期上涨和股息复利，主要改善回撤，未稳定创造超额收益。",
+      validation: "深读的一组2016至2026回测中，±5%满仓/空仓规则显著降低波动，但超额仅约2%；容易错过长期上涨和股息复利。",
       nextStep: "保留核心仓位，只调节新增资金。",
+    },
+    {
+      id: "fund-flow-opaque-model",
+      title: "资金因子满仓/空仓模型",
+      stage: "shadow",
+      communityClaim: "用资金强弱在满仓和空仓间切换，减少核心下跌区间。",
+      terminalUse: "只记录换仓频率、胜率和盈亏比等公开结果，不进入仓位分数。",
+      validation: "深读页面展示约8.5年、年均换仓6.3次和高盈亏比，但核心公式、费用、信号时点及独立样本外结果未公开，当前无法复算。",
+      nextStep: "取得完整公式后，用前一日信号、场外确认规则和同期持有基准重新验证。",
+    },
+    {
+      id: "weekly-noise-filter",
+      title: "周线过滤日线噪声",
+      stage: "shadow",
+      communityClaim: "把日线信号提升到周线确认，可减少来回打脸。",
+      terminalUse: "候选用途是给MA5/MA20增加连续日或周末确认，不改变MA250主档位。",
+      validation: "降低交易频率有逻辑，但确认越慢也会牺牲拐点响应；尚未在008163滚动样本外区间稳定胜出。",
+      nextStep: "比较连续3日、周五确认和不确认三种规则的换手、回撤及120日收益。",
+    },
+    {
+      id: "never-sell-universal",
+      title: "红利永不止盈止损",
+      stage: "rejected",
+      communityClaim: "红利资产只收息即可，任何时候都不需要卖出。",
+      terminalUse: "拒绝绝对化口号；保留50%核心仓，但极端高估、规则失效或基金异常时允许触碰底仓。",
+      validation: "股息并不能消除估值、行业集中、盈利恶化和跟踪风险，固定不卖也无法适配用户明确的波段仓结构。",
+      nextStep: "为触碰底仓保留高门槛，并要求趋势、估值和基金风险至少两类证据同时确认。",
     },
     {
       id: "raw-nav-ma250",
@@ -156,6 +201,80 @@ export const communityResearch: CommunityResearchSnapshot = {
       terminalUse: "拒绝硬阈值；高偏离只用于减少追涨。",
       validation: "历史上涨后的路径受趋势、利率和估值影响，不存在稳定的必跌点。",
       nextStep: "改看历史偏离分位、RSI和趋势强度的组合。",
+    },
+  ],
+  sources: [
+    {
+      id: "6a5d918e000000001d00cef7",
+      title: "红利低波年线择时，回撤大幅降低但无超额",
+      author: "水獭瑞德",
+      url: "https://www.xiaohongshu.com/explore/6a5d918e000000001d00cef7",
+      observedAt: "2026-08-06",
+      depth: "deep-read",
+      formulaDisclosure: "open",
+      decision: "adapted",
+      claim: "年线下5%满仓、年线上5%空仓，其余维持原仓位。",
+      review: "页面给出的2016至2026回测主要降低波动，超额仅约2%；终端只吸收分档思想，拒绝满仓/空仓开关。",
+    },
+    {
+      id: "6a610049000000001d00f7df",
+      title: "红利低波资金因子策略-历史仓位与深度回测",
+      author: "水獭瑞德",
+      url: "https://www.xiaohongshu.com/explore/6a610049000000001d00f7df",
+      observedAt: "2026-08-06",
+      depth: "deep-read",
+      formulaDisclosure: "closed",
+      decision: "shadow",
+      claim: "资金因子在满仓和空仓间切换，强调低胜率、高盈亏比。",
+      review: "展示了约8.5年仓位和年均6.3次换仓，但未见可复算公式；仅作为研究候选，不参与今日建议。",
+    },
+    {
+      id: "6a6da5c90000000032022ea0",
+      title: "从零开始学低波红利41｜择时10｜日线到周线",
+      author: "那就叫叶旺财吧",
+      url: "https://www.xiaohongshu.com/explore/6a6da5c90000000032022ea0",
+      observedAt: "2026-08-06",
+      depth: "title-screened",
+      formulaDisclosure: "closed",
+      decision: "shadow",
+      claim: "标题提出用周线处理低波红利择时。",
+      review: "正文尚未完成可复现审计；先测试周线是否只是减少交易，还是确有样本外改善。",
+    },
+    {
+      id: "6a4cd0640000000011014fd3",
+      title: "中证红利跌出机会了吗，该怎么择时",
+      author: "Code.47",
+      url: "https://www.xiaohongshu.com/explore/6a4cd0640000000011014fd3",
+      observedAt: "2026-08-06",
+      depth: "title-screened",
+      formulaDisclosure: "closed",
+      decision: "shadow",
+      claim: "标题把下跌位置与红利择时机会联系起来。",
+      review: "标题不能证明回撤越大越值得买；必须同时控制长期趋势，避免在结构恶化时不断加仓。",
+    },
+    {
+      id: "69c4eb2a000000001a0367b7",
+      title: "强调一下，红利不需要止盈更不需要止损",
+      author: "侦探滚雪球",
+      url: "https://www.xiaohongshu.com/explore/69c4eb2a000000001a0367b7",
+      observedAt: "2026-08-06",
+      depth: "title-screened",
+      formulaDisclosure: "closed",
+      decision: "rejected",
+      claim: "标题主张红利投资不需要止盈或止损。",
+      review: "绝对化表达不适合量化执行；核心仓可长期持有，但基金异常和多维极端风险必须保留退出条件。",
+    },
+    {
+      id: "6a4b593b0000000008031c4a",
+      title: "超额回报40%的红利低波择时",
+      author: "水獭瑞德",
+      url: "https://www.xiaohongshu.com/explore/6a4b593b0000000008031c4a",
+      observedAt: "2026-08-06",
+      depth: "title-screened",
+      formulaDisclosure: "closed",
+      decision: "shadow",
+      claim: "标题宣称红利低波择时获得较高超额回报。",
+      review: "收益标题不等于可复现证据；需核对起止区间、现金收益、费用、未来函数和样本外表现。",
     },
   ],
 };

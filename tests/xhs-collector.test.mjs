@@ -14,6 +14,10 @@ test("collector canonicalizes supported Xiaohongshu note URLs", () => {
     utils.canonicalNoteUrl("https://www.xiaohongshu.com/discovery/item/66aabb12"),
     "https://www.xiaohongshu.com/explore/66aabb12",
   );
+  assert.equal(
+    utils.canonicalNoteUrl("https://www.xiaohongshu.com/search_result/66aabb12?xsec_token=private"),
+    "https://www.xiaohongshu.com/explore/66aabb12",
+  );
   assert.equal(utils.canonicalNoteUrl("https://example.com/explore/66aabb12"), null);
   assert.equal(utils.canonicalNoteUrl("https://www.xiaohongshu.com/search_result?keyword=test"), null);
 });

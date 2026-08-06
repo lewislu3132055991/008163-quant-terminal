@@ -1,0 +1,22 @@
+:root { font-family: "Microsoft YaHei", system-ui, sans-serif; color: #202622; background: #f4f6f4; }
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; }
+header { padding: 18px 18px 14px; border-bottom: 1px solid #d9dfda; background: #fff; }
+header p { margin: 0 0 4px; color: #167565; font-size: 10px; font-weight: 700; }
+h1 { margin: 0; font-size: 18px; letter-spacing: 0; }
+header span { display: block; margin-top: 7px; color: #6c756f; font-size: 12px; line-height: 1.5; }
+main { padding: 14px 18px 18px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 12px; border: 1px solid #d9dfda; background: #fff; }
+.metrics div { padding: 10px; border-right: 1px solid #d9dfda; }
+.metrics div:last-child { border-right: 0; }
+.metrics span, .metrics strong { display: block; }
+.metrics span { color: #6c756f; font-size: 10px; }
+.metrics strong { margin-top: 4px; font-size: 17px; }
+.commands { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+button { min-height: 38px; border: 1px solid #cbd3cd; border-radius: 5px; background: #fff; color: #202622; font: inherit; font-size: 12px; cursor: pointer; }
+button:hover { border-color: #167565; }
+button.primary { grid-column: 1 / -1; border-color: #167565; background: #167565; color: #fff; font-weight: 700; }
+button:disabled { cursor: wait; opacity: .55; }
+details { margin-top: 12px; border-top: 1px solid #d9dfda; padding-top: 10px; color: #5f6862; font-size: 11px; line-height: 1.55; }
+details p { margin: 7px 0 0; }
+.error { margin: 10px 0 0; padding: 8px; border-left: 3px solid #b64c43; background: #fff; color: #8e3029; font-size: 11px; }

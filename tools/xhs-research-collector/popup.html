@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>008163 红利研究采集器</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <p>008163 RESEARCH</p>
+      <h1>小红书研究采集器</h1>
+      <span id="status">正在读取状态</span>
+    </header>
+    <main>
+      <section class="metrics">
+        <div><span>待读取</span><strong id="pending">0</strong></div>
+        <div><span>已收录</span><strong id="records">0</strong></div>
+        <div><span>读取失败</span><strong id="failed">0</strong></div>
+      </section>
+      <section class="commands">
+        <button id="scan" type="button">扫描当前搜索页</button>
+        <button id="collect" type="button">收录当前帖子</button>
+        <button id="batch" class="primary" type="button">开始本批（最多6篇）</button>
+        <button id="stop" type="button">暂停并保留进度</button>
+        <button id="export" type="button">导出研究 JSON</button>
+      </section>
+      <details>
+        <summary>采集规则</summary>
+        <p>仅读取你已登录后能正常看到的页面。每篇间隔12至20秒；遇到登录、验证码或风控立即暂停，不会尝试绕过。</p>
+      </details>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

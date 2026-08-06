@@ -412,6 +412,10 @@ function DeviationHistoryChart({ bundle }: { bundle: ResearchBundle }) {
 
 export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
   const study = useMemo(() => buildTimingStudy(bundle.navSeries), [bundle.navSeries]);
+  const adjustedNav = useMemo(() => bundle.navSeries.map((item) => item.accumulated ?? item.value), [bundle.navSeries]);
+  const currentRsi = rsi(adjustedNav, 14);
+  const recent120 = adjustedNav.slice(-120);
+  const drawdown120 = recent120.length ? study.current / Math.max(...recent120) - 1 : 0;
   const crossText = study.crossState === "golden-today" ? "今日金叉" : study.crossState === "death-today" ? "今日死叉" : study.crossState === "above" ? "MA5在MA20上方" : "MA5在MA20下方";
   const currentBand = study.bands.find((band) => study.deviation >= band.min && study.deviation < band.max);
   const researchCounts = communityResearch.rules.reduce((counts, rule) => {
@@ -427,6 +431,53 @@ export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
     { rule: "80分买、55分卖且每日调25%", status: "拒绝照搬", tone: "bad", finding: "原帖没有公开可复算的评分模型和样本外结果；场外基金又按未知净值成交，每日大幅换仓不匹配申赎机制。" },
     { rule: "涨到固定百分比后必然回落", status: "拒绝硬规则", tone: "bad", finding: "价格没有固定的“涨多少必跌”。只把高偏离度当作减少新增资金的理由，不据此一次性赎回。" },
     { rule: "用单位净值直接比较MA250", status: "拒绝", tone: "bad", finding: "008163会分红除息，单位净值出现机械下跳。年线研究必须用累计净值或分红再投资复权序列。" },
+  ];
+  const playbook = [
+    {
+      label: "长期位置",
+      indicator: `MA250偏离 ${study.deviation >= 0 ? "+" : ""}${(study.deviation * 100).toFixed(2)}%`,
+      state: study.contributionLabel,
+      action: `${study.contributionMultiplier}份新增资金`,
+      why: "年线管理投入强弱；使用分红再投资复权净值，避免除息造成假跌破。",
+      limit: "不能据此把底仓全清或一次满仓。",
+      tone: study.deviation < 0 ? "buy" : study.deviation >= 0.1 ? "wait" : "neutral",
+    },
+    {
+      label: "执行节奏",
+      indicator: `MA5 ${study.ma5.toFixed(4)} / MA20 ${study.ma20.toFixed(4)}`,
+      state: crossText,
+      action: study.crossState === "golden-today" || study.crossState === "above" ? "当前档可执行" : "当前档拆成2次",
+      why: "短均线反映最近一周相对一月的速度，只用于确认执行时点。",
+      limit: "金叉和死叉都不是独立买卖按钮。",
+      tone: study.crossState === "golden-today" || study.crossState === "above" ? "buy" : "wait",
+    },
+    {
+      label: "短期温度",
+      indicator: `RSI14 ${currentRsi.toFixed(1)}`,
+      state: currentRsi >= 70 ? "偏热" : currentRsi <= 30 ? "偏冷" : "中性区",
+      action: currentRsi >= 70 ? "不追高，延后加仓" : currentRsi <= 30 ? "允许按当前档执行" : "不单独调整",
+      why: "RSI比较近14个净值日上涨与下跌力度，适合识别短期过热或超卖。",
+      limit: "强趋势中RSI可长期偏高或偏低，必须服从MA250主档。",
+      tone: currentRsi >= 70 ? "wait" : currentRsi <= 30 ? "buy" : "neutral",
+    },
+    {
+      label: "近期回撤",
+      indicator: `距120日高点 ${(drawdown120 * 100).toFixed(2)}%`,
+      state: drawdown120 <= -0.12 ? "深回撤" : drawdown120 <= -0.08 ? "中等回撤" : drawdown120 <= -0.05 ? "轻回撤" : "接近高位区间",
+      action: "影子观察，不重复加码",
+      why: "回撤能描述当前位置，但和年线偏离高度相关，重复计权会放大抄底冲动。",
+      limit: "下跌趋势未稳定时，回撤深不等于马上反弹。",
+      tone: drawdown120 <= -0.08 ? "buy" : "neutral",
+    },
+    {
+      label: "估值背景",
+      indicator: `PE ${bundle.metrics.pe.value.toFixed(2)} / 股息率 ${bundle.metrics.dividendYield.quality === "unavailable" || bundle.metrics.dividendYield.value <= 0 ? "暂无可靠值" : `${bundle.metrics.dividendYield.value.toFixed(2)}%`}`,
+      state: bundle.metrics.pe.pointInTimeSafe && bundle.metrics.dividendYield.pointInTimeSafe ? "可回测口径" : "当前观察口径",
+      action: "影子因子，暂不改仓",
+      why: "估值与股息率有经济含义，但历史时点口径不完整会产生未来数据泄漏。",
+      limit: "便宜不等于止跌，单次快照不能证明长期分位。",
+      tone: "shadow",
+    },
   ];
   const communityFindings = [
     { title: "均线看过程，不看按钮", body: "较完整的经验帖会同时观察均线方向、距离收敛或发散、价格所处位置，以及交叉后的持续性。这比只记“金叉买、死叉卖”可靠。" },
@@ -445,6 +496,15 @@ export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
       <div><span>MA250</span><strong>{study.ma250.toFixed(4)}</strong><small>约一年成本</small></div>
       <div><span>年线偏离</span><strong className={study.deviation <= 0 ? "negative" : "positive"}>{study.deviation >= 0 ? "+" : ""}{(study.deviation * 100).toFixed(2)}%</strong><small>越低越便宜，但非估值</small></div>
       <div><span>历史位置</span><strong>P{study.percentile.toFixed(0)}</strong><small>约{(100 - study.percentile).toFixed(0)}%历史日更高</small></div>
+    </section>
+    <section className="plain-section community-playbook">
+      <div className="section-heading"><div><p className="eyebrow">今天的量化操作表</p><h2>指标怎样落到动作</h2></div><BadgeLike>主规则 + 确认 + 影子</BadgeLike></div>
+      <div className="playbook-list">{playbook.map((item) => <article key={item.label} className={`playbook-row ${item.tone}`}>
+        <div className="playbook-signal"><span>{item.label}</span><strong>{item.indicator}</strong><small>{item.state}</small></div>
+        <div className="playbook-action"><span>今天怎么做</span><strong>{item.action}</strong></div>
+        <details><summary>为什么这样判断</summary><p>{item.why}</p><p><b>不能这样用：</b>{item.limit}</p></details>
+      </article>)}</div>
+      <p className="method-note">执行顺序：先看MA250决定0至2份，再用MA5/MA20和RSI决定立即执行还是拆分；回撤和估值目前只解释背景，不重复加分。</p>
     </section>
     <section className="plain-section timing-chart-section">
       <div className="section-heading"><div><p className="eyebrow">位置比口诀更重要</p><h2>复权净值与MA250</h2></div><BadgeLike>{bundle.navSeries.length}日</BadgeLike></div>
@@ -482,7 +542,7 @@ export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
       <div className="section-heading"><div><p className="eyebrow">小红书经验研究库 · v{communityResearch.version}</p><h2>经验研究雷达</h2></div><BadgeLike>更新 {communityResearch.updatedAt}</BadgeLike></div>
       <div className="collector-health">
         <div className="collector-heading"><div><ShieldCheck size={18} /><span><strong>电脑端研究采集器</strong><small>登录会话内低频读取，原文仅保存在本地</small></span></div><a href="https://lewislu3132055991.github.io/008163-quant-terminal/tools/xhs-research-collector.zip" download><Download size={15} />下载采集器</a></div>
-        <div className="collector-metrics"><div><span>每批上限</span><strong>6篇</strong></div><div><span>篇间等待</span><strong>12–20秒</strong></div><div><span>中断恢复</span><strong><RotateCw size={13} />保留队列</strong></div><div><span>登录/风控</span><strong>立即暂停</strong></div></div>
+        <div className="collector-metrics"><div><span>新版链接</span><strong>已兼容</strong></div><div><span>图片型帖子</span><strong>保留待核对</strong></div><div><span>中断恢复</span><strong><RotateCw size={13} />保留队列</strong></div><div><span>登录/风控</span><strong>立即暂停</strong></div></div>
       </div>
       <div className="research-funnel"><span>帖子检索</span><i /><span>转成规则</span><i /><span>008163回测</span><i /><span>样本外验证</span><i /><span>进入建议</span></div>
       <div className="research-summary"><div><span>标题筛选</span><strong>{communityResearch.titleScreened}</strong></div><div><span>逐条深读</span><strong>{communityResearch.deepRead}</strong></div><div><span>已入模</span><strong>{researchCounts.adopted}</strong></div><div><span>影子观察</span><strong>{researchCounts.shadow}</strong></div><div><span>已拒绝</span><strong>{researchCounts.rejected}</strong></div></div>
@@ -491,6 +551,14 @@ export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
         <p><b>帖子观点：</b>{rule.communityClaim}</p><p><b>终端处理：</b>{rule.terminalUse}</p>
         <details><summary>查看验证依据和下一步</summary><p><b>验证：</b>{rule.validation}</p><p><b>下一步：</b>{rule.nextStep}</p></details>
       </article>)}</div>
+      <div className="community-source-ledger">
+        <div className="subchart-heading"><strong>本轮帖子审计记录</strong><span>深读与标题筛选分开</span></div>
+        {communityResearch.sources.map((source) => <article key={source.id}>
+          <div><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a><span className={`source-depth ${source.depth === "deep-read" ? "deep" : "screened"}`}>{source.depth === "deep-read" ? "已深读" : "仅筛标题"}</span></div>
+          <small>{source.author} · 公式{source.formulaDisclosure === "open" ? "公开" : source.formulaDisclosure === "partial" ? "部分公开" : "未公开"} · {source.observedAt}</small>
+          <p>{source.review}</p>
+        </article>)}
+      </div>
       <div className="product-benchmark">
         <div className="subchart-heading"><strong>同类AI工具拆解</strong><span>取其结构，不抄黑箱</span></div>
         {productPatterns.map((item) => <article key={item.id}><div><strong>{item.pattern}</strong><span className={`research-stage ${item.decision === "adopted" ? "adopted" : item.decision === "adapted" ? "shadow" : "rejected"}`}>{item.decision === "adopted" ? "本轮采用" : item.decision === "adapted" ? "改造采用" : "不采用"}</span></div><p>{item.finding}</p><a href={item.sourceUrl} target="_blank" rel="noreferrer">来源：{item.source}</a></article>)}
@@ -499,7 +567,7 @@ export function TimingDashboard({ bundle }: { bundle: ResearchBundle }) {
       <p className="method-note">进入“已入模”不代表永久有效。每条规则都要持续监控样本外表现；失效时降回影子观察。点赞、收藏和作者收益截图只用于发现假设，不作为有效性证据。</p>
     </section>
     <section className="plain-section">
-      <div className="section-heading"><div><p className="eyebrow">2026-08-06 · 社区研究笔记</p><h2>40篇标题筛选，9篇逐条深读</h2></div><BadgeLike>红利择时 / 回测</BadgeLike></div>
+      <div className="section-heading"><div><p className="eyebrow">{communityResearch.updatedAt} · 社区研究笔记</p><h2>{communityResearch.titleScreened}篇标题筛选，{communityResearch.deepRead}篇逐条深读</h2></div><BadgeLike>红利择时 / 回测</BadgeLike></div>
       <div className="community-findings">{communityFindings.map((item, index) => <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{item.title}</strong><p>{item.body}</p></div></article>)}</div>
       <p className="method-note">社区帖子用于发现问题，不作为权威数据源。这里记录的是对规则的转述和审计结论，不复制作者未公开的模型，也不以点赞量替代验证。</p>
       <div className="source-links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%BA%A2%E5%88%A9%E6%8B%A9%E6%97%B6" target="_blank" rel="noreferrer">检索：红利择时</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%BA%A2%E5%88%A9%E5%9B%9E%E6%B5%8B" target="_blank" rel="noreferrer">检索：红利回测</a></div>

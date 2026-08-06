@@ -38,6 +38,13 @@ test("community rules are versioned and cannot enter the model on anecdotes alon
     assert.ok(rule.nextStep.length >= 10);
     if (rule.stage === "adopted") assert.doesNotMatch(rule.validation, /点赞|收藏|收益截图/);
   }
+  assert.equal(new Set(communityResearch.sources.map((source) => source.id)).size, communityResearch.sources.length);
+  for (const source of communityResearch.sources) {
+    assert.match(source.url, /^https:\/\/www\.xiaohongshu\.com\/explore\/[a-zA-Z0-9]+$/);
+    assert.ok(source.review.length >= 20);
+    assert.match(source.observedAt, /^\d{4}-\d{2}-\d{2}$/);
+    if (source.depth === "title-screened") assert.notEqual(source.decision, "adapted");
+  }
 });
 
 test("product benchmark decisions remain traceable", () => {
