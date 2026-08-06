@@ -1,47 +1,47 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-06T12:23:22+08:00",
+  "generatedAt": "2026-08-06T21:11:55+08:00",
   "breadth": {
-    "value": 0.17147385103011092,
+    "value": 0.25863708399366087,
     "source": "最新披露持仓加权 / 腾讯复权行情",
-    "asOf": "2026-08-06T12:22:28+08:00",
-    "retrievedAt": "2026-08-06T12:23:22+08:00",
+    "asOf": "2026-08-06T21:11:03+08:00",
+    "retrievedAt": "2026-08-06T21:11:55+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pe": {
-    "value": 12.726313787638666,
+    "value": 12.816561014263073,
     "source": "最新披露持仓加权 / 腾讯个股PE",
-    "asOf": "2026-08-06T12:22:28+08:00",
-    "retrievedAt": "2026-08-06T12:23:22+08:00",
+    "asOf": "2026-08-06T21:11:03+08:00",
+    "retrievedAt": "2026-08-06T21:11:55+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pb": {
-    "value": 1.5254896988906497,
+    "value": 1.535207606973059,
     "source": "最新披露持仓加权 / 腾讯个股PB",
-    "asOf": "2026-08-06T12:22:28+08:00",
-    "retrievedAt": "2026-08-06T12:23:22+08:00",
+    "asOf": "2026-08-06T21:11:03+08:00",
+    "retrievedAt": "2026-08-06T21:11:55+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "roe": {
-    "value": 11.986893646865674,
+    "value": 11.978311539769395,
     "source": "披露持仓PB/PE推导ROE代理",
-    "asOf": "2026-08-06T12:22:28+08:00",
-    "retrievedAt": "2026-08-06T12:23:22+08:00",
+    "asOf": "2026-08-06T21:11:03+08:00",
+    "retrievedAt": "2026-08-06T21:11:55+08:00",
     "frequency": "quarterly",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "dividendYield": {
     "value": 0.0,
-    "source": "标普指数资料（上次成功值）",
+    "source": "标普指数资料（上次成功值）（上次成功值）",
     "asOf": "2026-08-05T17:09:02+08:00",
-    "retrievedAt": "2026-08-06T12:22:27+08:00",
+    "retrievedAt": "2026-08-06T21:11:02+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
@@ -86,7 +86,7 @@
       "code": "001286",
       "name": "陕西能源",
       "weight": 2.75,
-      "aboveMa20": false,
+      "aboveMa20": true,
       "holdingAsOf": "2026年2季度股票投资明细"
     },
     {
