@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-06T12:34:19+08:00",
+  "generatedAt": "2026-08-06T12:23:22+08:00",
   "events": [
     {
       "id": "southern-fund-disclosure",
@@ -10,8 +10,8 @@
       "summary": "采集任务保留官方核对入口；报告内容经结构化解析后再进入跟踪误差与资产配置因子。",
       "url": "https://www.nffund.com/main/jjcp/fundproduct/008163.shtml",
       "source": "南方基金",
-      "asOf": "2026-08-06T12:34:19+08:00",
-      "retrievedAt": "2026-08-06T12:34:19+08:00",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -24,8 +24,8 @@
       "summary": "用于核对ETF份额、净值、IOPV、分红和交易公告；官方披露优先于聚合行情。",
       "url": "https://www.sse.com.cn/assortment/fund/etf/detail/index.shtml?FUNDID=515450",
       "source": "上海证券交易所",
-      "asOf": "2026-08-06T12:34:19+08:00",
-      "retrievedAt": "2026-08-06T12:34:19+08:00",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -38,8 +38,8 @@
       "summary": "跟踪指数方法、再平衡和成分调整公告；仅在取得可验证时点后进入研究记录。",
       "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-china-a-share-dividend-low-volatility-50-index/",
       "source": "S&P Dow Jones Indices",
-      "asOf": "2026-08-06T12:34:19+08:00",
-      "retrievedAt": "2026-08-06T12:34:19+08:00",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false

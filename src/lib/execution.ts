@@ -1,4 +1,5 @@
 import type { Recommendation } from "../types";
+import { swingUnitsForScore } from "./strategy.ts";
 
 export const SWING_SCORE_BANDS = [
   { signedUnits: 3, range: "75—100", label: "强买入", units: "+3" },
@@ -50,16 +51,6 @@ export interface SwingExecutionPlan {
 const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value));
 const directionOf = (signedUnits: number) => signedUnits > 0 ? "buy" : signedUnits < 0 ? "sell" : "hold";
 
-function scoreUnits(score: number) {
-  if (score >= 75) return 3;
-  if (score >= 65) return 2;
-  if (score >= 57) return 1;
-  if (score > 43) return 0;
-  if (score > 35) return -1;
-  if (score > 25) return -2;
-  return -3;
-}
-
 function actionTitle(direction: "buy" | "sell" | "hold", regularUnits: number, specialUnits: number, prefix: string) {
   const totalUnits = regularUnits + specialUnits;
   if (direction === "hold" || totalUnits === 0) return `${prefix}暂不调整`;
@@ -73,7 +64,7 @@ export function buildSwingExecution(input: SwingExecutionInput): SwingExecutionP
   const currentFundValue = totalCapital === undefined ? undefined : clamp(input.currentFundValue ?? totalCapital * 0.5, 0, totalCapital);
   const currentSwingUnits = currentFundValue === undefined ? undefined : clamp((currentFundValue - totalCapital! * 0.5) / (totalCapital! * unitRatio), 0, 10);
   const remainingSwingUnits = currentSwingUnits === undefined ? undefined : 10 - currentSwingUnits;
-  const baseUnits = scoreUnits(input.score);
+  const baseUnits = swingUnitsForScore(input.score);
   let signalSignedUnits = baseUnits;
   const reasons: string[] = [`综合分${input.score.toFixed(1)}对应基础${Math.abs(baseUnits)}个单位${baseUnits > 0 ? "买入" : baseUnits < 0 ? "卖出" : "观察"}`];
 

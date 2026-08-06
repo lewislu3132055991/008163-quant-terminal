@@ -3,6 +3,16 @@ import type { DecisionWindow, FactorContribution, PortfolioSnapshot, Recommendat
 const clamp = (value: number, min = 0, max = 100) => Math.min(max, Math.max(min, value));
 const round = (value: number, digits = 2) => Number(value.toFixed(digits));
 
+export function swingUnitsForScore(score: number) {
+  if (score >= 75) return 3;
+  if (score >= 65) return 2;
+  if (score >= 57) return 1;
+  if (score > 43) return 0;
+  if (score > 35) return -1;
+  if (score > 25) return -2;
+  return -3;
+}
+
 export function sma(values: number[], period: number): number {
   if (!values.length) return 0;
   const slice = values.slice(-Math.min(period, values.length));
@@ -161,17 +171,18 @@ export function calculateFactors(bundle: ResearchBundle): FactorContribution[] {
 export function buildRecommendation(bundle: ResearchBundle, portfolio?: PortfolioSnapshot, now = new Date()): Recommendation {
   const factors = calculateFactors(bundle);
   const score = round(factors.reduce((sum, item) => sum + item.score * item.weight, 0) / 100, 1);
-  const rawTarget = 20 + ((score - 30) / 50) * 70;
-  const targetPosition = Math.round(clamp(rawTarget, 20, 90) / 5) * 5;
+  const targetPosition = Math.round(clamp(50 + score * 0.5, 50, 100) / 5) * 5;
   const health = assessData(bundle, now);
   const total = portfolio ? portfolio.marketValue + portfolio.cash : 0;
   const currentPosition = total > 0 && portfolio ? (portfolio.marketValue / total) * 100 : targetPosition;
-  const uncappedChange = targetPosition - currentPosition;
-  const suggestedPositionChange = portfolio
-    ? (Math.abs(uncappedChange) < 5 ? 0 : clamp(uncappedChange, -20, 20))
-    : (score >= 60 ? 10 : score < 42 ? -10 : 0);
+  const modelChange = swingUnitsForScore(score) * 5;
+  const swingHeld = Math.max(0, currentPosition - 50);
+  const buyCapacity = Math.max(0, 100 - currentPosition);
+  const suggestedPositionChange = !portfolio ? modelChange : modelChange > 0
+    ? Math.min(modelChange, buyCapacity)
+    : modelChange < 0 ? -Math.min(Math.abs(modelChange), swingHeld) : 0;
   const action = suggestedPositionChange > 0 ? "subscribe" : suggestedPositionChange < 0 ? "redeem" : "hold";
-  const amount = portfolio ? Math.min(Math.abs((suggestedPositionChange / 100) * total), action === "subscribe" ? portfolio.cash : portfolio.marketValue) : undefined;
+  const amount = portfolio && action !== "hold" ? Math.min(Math.abs((suggestedPositionChange / 100) * total), action === "subscribe" ? portfolio.cash : Math.max(0, portfolio.marketValue - total * 0.5)) : undefined;
   const latestNav = bundle.navSeries.at(-1)?.value ?? 1;
   const warnings: string[] = [];
   if (bundle.mode === "sample") warnings.push("当前为内置演示快照，只展示功能，不构成当日操作依据");
@@ -194,7 +205,7 @@ export function buildRecommendation(bundle: ResearchBundle, portfolio?: Portfoli
     suggestedShares: status === "final" && action === "redeem" && amount !== undefined ? Math.floor(amount / latestNav * 100) / 100 : undefined,
     dataCompleteness: health.completeness,
     validationPassed: bundle.backtest.validationPassed,
-    title: action === "subscribe" ? "当前点位偏适合分批买入" : action === "redeem" ? "当前点位偏谨慎，暂停投入" : "信号中性，今日以观察为主",
+    title: action === "subscribe" ? `50/50策略：波段仓买入${Math.abs(suggestedPositionChange / 5)}个单位` : action === "redeem" ? `50/50策略：波段仓卖出${Math.abs(suggestedPositionChange / 5)}个单位` : "50/50策略：波段仓暂不调整",
     reason: `市场类贡献${round(factors.filter((item) => item.group === "market").reduce((sum, item) => sum + item.contribution, 0), 1)}，信息类贡献${round(factors.filter((item) => item.group === "information").reduce((sum, item) => sum + item.contribution, 0), 1)}。`,
     warnings,
     factors,

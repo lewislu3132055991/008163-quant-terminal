@@ -25,11 +25,28 @@ test("technical helpers are deterministic", () => {
   assert.equal(maxDrawdown([100, 120, 90, 110]), -0.25);
 });
 
-test("target position respects all position and daily-change limits", () => {
+test("target position preserves the fifty-percent core and swing-unit limits", () => {
   const recommendation = buildRecommendation(liveBundle(), portfolio(0, 100_000));
-  assert.ok(recommendation.targetPosition >= 20 && recommendation.targetPosition <= 90);
+  assert.ok(recommendation.targetPosition >= 50 && recommendation.targetPosition <= 100);
   assert.equal(recommendation.targetPosition % 5, 0);
-  assert.ok(Math.abs(recommendation.suggestedPositionChange) <= 20);
+  assert.ok(Math.abs(recommendation.suggestedPositionChange) <= 15);
+});
+
+test("ordinary sell advice cannot redeem the fifty-percent core", () => {
+  const bundle = liveBundle();
+  for (const bar of bundle.daily) bar.close = Math.max(0.1, 3 - bundle.daily.indexOf(bar) * 0.01);
+  const recommendation = buildRecommendation(bundle, portfolio(50_000, 50_000));
+  assert.ok(recommendation.suggestedPositionChange >= 0);
+  assert.notEqual(recommendation.action, "redeem");
+  assert.equal(recommendation.suggestedAmount, undefined);
+});
+
+test("anonymous advice keeps the same five-percent swing-unit rhythm", () => {
+  const bundle = liveBundle();
+  const recommendation = buildRecommendation(bundle);
+  assert.equal(recommendation.suggestedPositionChange % 5, 0);
+  assert.ok(Math.abs(recommendation.suggestedPositionChange) <= 15);
+  assert.match(recommendation.title, /50\/50策略/);
 });
 
 test("quote conflict over 0.3 percent blocks amount advice", () => {

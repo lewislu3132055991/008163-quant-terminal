@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { buildSwingExecution } from "../src/lib/execution.ts";
+import { swingUnitsForScore } from "../src/lib/strategy.ts";
 
 const base = {
   status: "final",
@@ -15,6 +16,7 @@ const base = {
 };
 
 test("swing score tiers map to transparent five-percent units", () => {
+  assert.deepEqual([80, 68, 60, 49, 40, 30, 20].map(swingUnitsForScore), [3, 2, 1, 0, -1, -2, -3]);
   assert.equal(buildSwingExecution({ ...base, score: 80 }).units, 3);
   assert.equal(buildSwingExecution({ ...base, score: 68 }).units, 2);
   assert.equal(buildSwingExecution({ ...base, score: 60 }).units, 1);

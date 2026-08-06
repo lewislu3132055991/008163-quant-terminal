@@ -1,4 +1,4 @@
-const CACHE = "fund-008163-shell-v19";
+const CACHE = "fund-008163-shell-v20";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./favicon.svg"];
 
 self.addEventListener("install", (event) => {

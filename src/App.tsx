@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  Activity, AlertTriangle, ArrowRight, BarChart3, BookOpenCheck, ChevronDown,
+  Activity, AlertTriangle, BarChart3, BookOpenCheck, ChevronDown,
   Check, Clock3, CloudOff, Database, Download, ExternalLink, Eye, EyeOff, FileDown, FlaskConical,
-  Gauge, Home, Info, KeyRound, Layers3, LineChart, ListChecks, LockKeyhole, RefreshCw, Save, ShieldCheck,
+  Gauge, Home, Info, KeyRound, LineChart, ListChecks, LockKeyhole, RefreshCw, Save, ShieldCheck,
   Scale, Target, TrendingDown, TrendingUp, Upload, WalletCards, Wifi, X,
 } from "lucide-react";
 import { ComparisonChart, MarketCharts, TimingDashboard } from "./components/MarketCharts";
@@ -11,7 +11,7 @@ import { decryptPortfolio, downloadEncryptedBackup, encryptPortfolio, isValidPin
 import { checkGitHubConnectivity, loadResearchBundle, refreshBrowserMarket } from "./lib/data";
 import { buildSwingExecution, SWING_SCORE_BANDS, type SwingExecutionPlan } from "./lib/execution";
 import { applyDecisionWindow, assessData, buildRecommendation, getDecisionWindow, rsi, sma } from "./lib/strategy";
-import { buildTimingStudy, timingMultiplier } from "./lib/timing";
+import { buildTimingStudy } from "./lib/timing";
 import type { DailyDecisionRecord, DecisionWindow, EncryptedPortfolio, LedgerEntry, PortfolioSnapshot, Recommendation, ResearchBundle } from "./types";
 
 type Tab = "home" | "charts" | "timing" | "research" | "portfolio";
@@ -55,20 +55,23 @@ function DataModeBanner({ bundle, detail, githubOk }: { bundle: ResearchBundle; 
   </div>;
 }
 
-function RecommendationPanel({ recommendation, decisionWindow }: { recommendation: Recommendation; decisionWindow: DecisionWindow }) {
-  const actionLabel = recommendation.action === "subscribe" ? "偏买入" : recommendation.action === "redeem" ? "偏回避" : "中性";
-  const actionClass = recommendation.action === "subscribe" ? "buy" : recommendation.action === "redeem" ? "sell" : "hold";
+function RecommendationPanel({ recommendation, decisionWindow, swingPlan }: { recommendation: Recommendation; decisionWindow: DecisionWindow; swingPlan: SwingExecutionPlan }) {
+  const executable = swingPlan.totalUnits > 0;
+  const previewUnits = swingPlan.signalTotalPercent / swingPlan.unitTotalPercent;
+  const actionClass = executable ? swingPlan.direction : "hold";
+  const actionLabel = executable ? (swingPlan.direction === "buy" ? "执行买入" : "执行卖出") : previewUnits > 0 ? (swingPlan.signalDirection === "buy" ? "预备买入" : "预备卖出") : "等待";
   const statusLabel = recommendation.status === "frozen" ? "已冻结" : recommendation.status === "final" ? "已确认" : recommendation.status === "blocked" ? "已阻断" : "初步分析";
   const marketContribution = recommendation.factors.filter((item) => item.group === "market").reduce((sum, item) => sum + item.contribution, 0);
   const informationContribution = recommendation.factors.filter((item) => item.group === "information").reduce((sum, item) => sum + item.contribution, 0);
-  const plainAction = recommendation.action === "subscribe"
-    ? "把计划资金分成2—3次，小额开始，不一次押满"
-    : recommendation.action === "redeem"
-      ? "没有持仓就暂停新增；已有仓位只考虑分批降低"
-      : "今天不追涨也不急卖，保留资金等待更清晰信号";
+  const mainTitle = executable
+    ? `50/50主策略：波段仓${swingPlan.direction === "buy" ? "买入" : "卖出"}${swingPlan.totalUnits}个单位`
+    : previewUnits > 0 ? `当前先观察，预备${swingPlan.signalDirection === "buy" ? "买入" : "卖出"}${previewUnits}个单位` : "50/50主策略：波段仓暂不调整";
+  const plainAction = executable
+    ? `${swingPlan.direction === "buy" ? "申购" : "赎回"}总资金的${swingPlan.totalPercent}%；普通操作只动波段仓`
+    : previewUnits > 0 ? `现在不下单；14:45后若信号保持，计划${swingPlan.signalDirection === "buy" ? "申购" : "赎回"}总资金的${swingPlan.signalTotalPercent}%` : "今天不追涨也不急卖，50%底仓保持不动";
   return <section className={`recommendation ${actionClass}`}>
-    <div className="recommendation-kicker"><span>今日主建议</span><Badge tone={recommendation.status === "blocked" ? "bad" : recommendation.status === "preliminary" ? "warn" : "good"}>{statusLabel}</Badge></div>
-    <h1>{recommendation.title}</h1>
+    <div className="recommendation-kicker"><span>今日主建议 · 50%底仓 / 50%波段</span><Badge tone={recommendation.status === "blocked" ? "bad" : recommendation.status === "preliminary" ? "warn" : "good"}>{statusLabel}</Badge></div>
+    <h1>{mainTitle}</h1>
     <div className="action-callout"><span>今天怎么做</span><strong>{plainAction}</strong><b className={actionClass}>{actionLabel}</b></div>
     <div className={`decision-clock ${decisionWindow.phase}`}><Clock3 size={16} /><span><strong>{decisionWindow.label}</strong>{decisionWindow.detail}</span></div>
     <details className="decision-details"><summary>查看量化分数怎么组成</summary><div className="recommendation-numbers">
@@ -172,42 +175,16 @@ function SwingExecutionPanel({ plan, fundUrl }: { plan: SwingExecutionPlan; fund
   </section>;
 }
 
-function StrategyChoices({ bundle, recommendation, swingPlan }: { bundle: ResearchBundle; recommendation: Recommendation; swingPlan: SwingExecutionPlan }) {
-  const [selected, setSelected] = useState(() => localStorage.getItem("fund-008163-strategy-v2") ?? "swing50");
-  const closes = bundle.daily.map((bar) => bar.close);
-  const adjusted = bundle.navSeries.map((item) => item.accumulated ?? item.value);
-  const close = closes.at(-1) ?? 0;
-  const ma5 = sma(closes, 5);
-  const ma20 = sma(closes, 20);
-  const ma60 = sma(closes, 60);
-  const ma250 = sma(adjusted, 250);
-  const nav = adjusted.at(-1) ?? 0;
-  const timingRule = timingMultiplier(nav / ma250 - 1);
-  const timingStudy = buildTimingStudy(bundle.navSeries);
-  const rsi14 = rsi(closes, 14);
-  const trendVotes = [close > ma20, ma5 > ma20, ma20 > ma60].filter(Boolean).length;
-  const defensePosition = [75, 82, 88, 90][trendVotes];
-  const balancedAction = recommendation.action === "subscribe" ? "分批买入" : recommendation.action === "redeem" ? "适度降低暴露" : "持有观察";
-  const trendAction = ma5 > ma20 && rsi14 < 70 ? "顺势买入一小份" : ma5 < ma20 ? "暂停投入，已有仓位不追卖" : "等待交叉确认";
-  const contrarianAction = timingRule.label.replace("计划投入的", "投入").replace("按原计划", "按计划");
-  const balancedUnits = recommendation.score >= 65 ? 1.5 : recommendation.score >= 55 ? 1 : recommendation.score >= 45 ? 0.5 : 0;
-  const currentBand = timingStudy.bands.find((band) => timingStudy.deviation >= band.min && timingStudy.deviation < band.max);
-  const choices = [
-    { id: "swing50", name: "你的50/50波段", action: swingPlan.title, units: swingPlan.totalUnits === 0 ? "当前0单位" : `当前${swingPlan.direction === "buy" ? "买" : "卖"}${swingPlan.totalUnits}单位`, fit: "50%底仓长期持有，50%仓位机动波段", rule: `1单位=波段仓10%=总资金5%；综合分先给0—3单位，再由MA5/MA20、RSI与折溢价确认。`, evidence: swingPlan.explanation, caution: swingPlan.feeWarning, changeWhen: "综合分跨档、MA5/MA20关系改变、RSI进入极端区或折溢价异常时重算。" },
-    { id: "defense", name: "长期防守", action: trendVotes >= 2 ? "继续持有" : "减少新增", units: `本期${trendVotes >= 2 ? 1 : 0.5}份`, fit: "重视分红复利和较小回撤", rule: `趋势票数${trendVotes}/3；内部参考暴露度${defensePosition}%，只用于比较强弱。`, evidence: `样本外保留${bundle.backtest.returnRetention.toFixed(0)}%收益，最大回撤改善${bundle.backtest.drawdownImprovement.toFixed(1)}%。`, caution: "适合长期参与，不追求频繁低买高卖。", changeWhen: "至少两项中期趋势同时转弱或重新转强时，才调整投入档位。" },
-    { id: "balanced", name: "平衡量化", action: balancedAction, units: `本期${balancedUnits}份`, fit: "希望把趋势、估值和流动性放在一起", rule: `十项因子总分${recommendation.score}，市场70%、信息30%。`, evidence: bundle.backtest.returnPassed ? `样本外年化超过持有基准${bundle.backtest.excessReturn.toFixed(1)}个百分点。` : `收益增强尚未证实；当前主要价值是将最大回撤改善${bundle.backtest.drawdownImprovement.toFixed(1)}%。`, caution: "信息较全，但结果会比单一规则更平缓。", changeWhen: "综合分跨过45、55或65分档位，且关键数据没有冲突时改变。" },
-    { id: "trend", name: "趋势择时", action: trendAction, units: `本期${ma5 > ma20 && rsi14 < 70 ? 1 : 0}份`, fit: "接受更快变化，关注短中期趋势", rule: `MA5 ${ma5 > ma20 ? "高于" : "低于"} MA20，RSI14=${rsi14.toFixed(0)}。`, evidence: `本基金金叉后20日上涨率${timingStudy.goldenCross.winRate.toFixed(0)}%，死叉后仍有${timingStudy.deathCross.winRate.toFixed(0)}%，不能只看交叉。`, caution: "场外基金未知价成交，不适合日内频繁反复。", changeWhen: "MA5/MA20关系改变，或RSI进入70以上偏热区时重新判断。" },
-    { id: "contrarian", name: "年线分批", action: contrarianAction, units: `本期${timingRule.multiplier}份`, fit: "只想管理每期新增资金", rule: `复权净值${nav < ma250 ? "低于" : "高于"}MA250 ${Math.abs((nav / ma250 - 1) * 100).toFixed(2)}%。`, evidence: currentBand ? `历史同档位样本${currentBand.count}次，120日上涨率${currentBand.winRate.toFixed(0)}%，中位收益${currentBand.medianReturn.toFixed(1)}%。` : "当前档位历史样本不足。", caution: "投入倍率不同，不能只比较期末收益率。", changeWhen: "复权净值跨过MA250偏离档位边界时，调整下一期投入份数。" },
-  ];
-  const active = choices.find((item) => item.id === selected) ?? choices[0];
-  function choose(id: string) { setSelected(id); localStorage.setItem("fund-008163-strategy-v2", id); }
+function PrimaryStrategyRules({ swingPlan }: { swingPlan: SwingExecutionPlan }) {
   return <section className="plain-section strategy-choices">
-    <div className="section-heading"><div><p className="eyebrow">五种答案同时展示</p><h2>按你的投资风格选择</h2></div><Layers3 size={20} /></div>
-    <div className="strategy-compare">{choices.map((item) => <button key={item.id} className={selected === item.id ? "selected" : ""} onClick={() => choose(item.id)}>
-      <span>{selected === item.id ? <Check size={15} /> : <ArrowRight size={15} />}{item.name}</span><strong>{item.action}</strong><b>{item.units}</b>
-    </button>)}</div>
-    <div className="strategy-focus"><div><span>当前查看</span><strong>{active.name}</strong><small>{active.fit}</small></div><dl><div><dt>判断规则</dt><dd>{active.rule}</dd></div><div><dt>历史证据</dt><dd>{active.evidence}</dd></div><div><dt>什么会改变</dt><dd>{active.changeWhen}</dd></div><div><dt>使用边界</dt><dd>{active.caution}</dd></div></dl></div>
-    <p className="plain-explainer">没有持仓时，把“减少仓位”理解为暂停或减少新增；有持仓时，也只在当前仓位明显高于参考区间时分批调整。</p>
+    <div className="section-heading"><div><p className="eyebrow">主策略已固定，不再多选</p><h2>你的50/50波段规则</h2></div><Target size={20} /></div>
+    <div className="strategy-focus"><div><span>唯一主策略</span><strong>50%底仓 + 50%波段仓</strong><small>普通量化信号只操作波段仓</small></div><dl>
+      <div><dt>单次节奏</dt><dd>平均1个单位，等于波段仓10%、总资金5%；强信号可一次2至3个单位。</dd></div>
+      <div><dt>信号分工</dt><dd>综合分决定方向和基础单位；MA5/MA20、RSI只减速，数据冲突和折溢价异常直接阻断。</dd></div>
+      <div><dt>交易频率</dt><dd>{swingPlan.eventRule}</dd></div>
+      <div><dt>特殊边界</dt><dd>普通信号不动底仓；只有多项结构性风险共振才减底仓，深度低位反转才启用备用资金。</dd></div>
+    </dl></div>
+    <p className="plain-explainer">MA250、趋势、估值和资金因子不再各自给一套互相冲突的答案，它们全部服务于这一张50/50执行单。</p>
   </section>;
 }
 
@@ -217,13 +194,13 @@ function HomeView({ bundle, recommendation, dataDetail, githubOk, decisionWindow
   const swingPlan = getSwingExecution(bundle, recommendation, portfolio);
   return <div className="view-stack">
     <DataModeBanner bundle={bundle} detail={dataDetail} githubOk={githubOk} />
-    <RecommendationPanel recommendation={recommendation} decisionWindow={decisionWindow} />
+    <RecommendationPanel recommendation={recommendation} decisionWindow={decisionWindow} swingPlan={swingPlan} />
     <WarningList recommendation={recommendation} />
     <DataCoverageDetails bundle={bundle} />
     <SwingExecutionPanel plan={swingPlan} fundUrl={fund.fees.url} />
     <ActionChecklist bundle={bundle} />
     <SignalConsensus bundle={bundle} recommendation={recommendation} />
-    <StrategyChoices bundle={bundle} recommendation={recommendation} swingPlan={swingPlan} />
+    <PrimaryStrategyRules swingPlan={swingPlan} />
     <section className="plain-section">
       <div className="section-heading"><div><p className="eyebrow">最重要的三项驱动</p><h2>为什么得到这个建议</h2></div><button className="text-button" onClick={() => onNavigate("research")}>查看全部 <ChevronDown size={16} /></button></div>
       <FactorRows recommendation={recommendation} limit={3} />
@@ -328,7 +305,7 @@ function ResearchView({ bundle, recommendation, decisions }: { bundle: ResearchB
         <div><div><strong>收益能否更高</strong><Badge tone={bundle.backtest.returnPassed ? "good" : "neutral"}>{bundle.backtest.returnPassed ? "已证实" : "未证实"}</Badge></div><p>策略年化 {bundle.backtest.annualizedReturn.toFixed(1)}%，买入持有 {bundle.backtest.benchmarkAnnualizedReturn.toFixed(1)}%，保留了 {bundle.backtest.returnRetention.toFixed(0)}% 的收益。</p><small>通过标准：年化高2个百分点且多数区间胜出。没有达到就如实显示，不换参数刷绿。</small></div>
         <div><div><strong>回撤能否更小</strong><Badge tone={bundle.backtest.defensePassed ? "good" : "warn"}>{bundle.backtest.defensePassed ? "已通过" : "证据不足"}</Badge></div><p>最差回撤 {bundle.backtest.maxDrawdown.toFixed(1)}%，买入持有 {bundle.backtest.benchmarkMaxDrawdown.toFixed(1)}%，改善 {bundle.backtest.drawdownImprovement.toFixed(0)}%。</p><small>{(bundle.backtest.drawdownWinRate * 100).toFixed(0)}%测试区间回撤更小；同时要求保留至少80%收益。</small></div>
       </div>
-      <p className="method-note">采用高底仓防守策略：三个趋势条件决定75%、82%、88%或90%仓位。{bundle.backtest.methodology}。这更适合红利低波基金的长期参与，不以频繁择时跑赢满仓为目标。</p>
+      <p className="method-note">这里保留的是旧版高仓位防守模型的历史验证，只作为风险基准，不再驱动今日操作。当前唯一主执行策略是50%底仓、50%波段仓；波段单位策略将单独累计样本外记录后再展示正式回测。</p>
     </section>
     <section className="plain-section">
       <div className="section-heading"><div><p className="eyebrow">逐条可追溯</p><h2>数据源健康</h2></div><Database size={20} /></div>

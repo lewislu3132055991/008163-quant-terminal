@@ -62,13 +62,14 @@ h2 { margin: 0; font-size: 18px; line-height: 1.25; }
 .recommendation.sell { border-top-color: var(--green); }
 .recommendation .eyebrow { color: #afb8b2; }
 .recommendation-kicker { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 7px; color: #cbd2ce; font-size: 12px; font-weight: 700; }
-.recommendation > h1 { font-size: 24px; line-height: 1.3; }
+.recommendation-kicker > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.recommendation > h1 { min-width: 0; font-size: 24px; line-height: 1.3; overflow-wrap: anywhere; }
 .action-callout { position: relative; margin-top: 14px; padding: 13px 76px 13px 13px; border: 1px solid #4b544f; border-left: 3px solid #d68a15; background: #2d3430; border-radius: 5px; }
 .recommendation.buy .action-callout { border-left-color: #ff747c; }
 .recommendation.sell .action-callout { border-left-color: #57c79d; }
 .action-callout > span, .action-callout > strong { display: block; }
 .action-callout > span { margin-bottom: 4px; color: #aeb7b1; font-size: 11px; }
-.action-callout > strong { font-size: 14px; line-height: 1.55; }
+.action-callout > strong { min-width: 0; font-size: 14px; line-height: 1.55; overflow-wrap: anywhere; }
 .action-callout > b { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); min-width: 48px; padding: 7px 8px; border-radius: 4px; background: #454d48; color: #fff; font-size: 13px; text-align: center; }
 .action-callout > b.buy { background: #7d2930; color: #ffd8da; }
 .action-callout > b.sell { background: #165f48; color: #d5f4e8; }
