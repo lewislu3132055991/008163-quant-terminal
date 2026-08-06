@@ -1,0 +1,29 @@
+{
+  "name": "fund-008163-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build && node scripts/prepare-sites.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/*.test.mjs",
+    "lint": "eslint src --max-warnings=0"
+  },
+  "dependencies": {
+    "lightweight-charts": "5.0.9",
+    "lucide-react": "0.468.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.1",
+    "vite": "8.0.13"
+  }
+}

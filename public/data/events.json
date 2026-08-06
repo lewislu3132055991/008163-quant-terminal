@@ -1,0 +1,86 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-08-06T12:23:22+08:00",
+  "events": [
+    {
+      "id": "southern-fund-disclosure",
+      "title": "南方基金008163公告与定期报告入口",
+      "category": "fund",
+      "impact": "neutral",
+      "summary": "采集任务保留官方核对入口；报告内容经结构化解析后再进入跟踪误差与资产配置因子。",
+      "url": "https://www.nffund.com/main/jjcp/fundproduct/008163.shtml",
+      "source": "南方基金",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
+      "frequency": "event",
+      "quality": "verified",
+      "pointInTimeSafe": false
+    },
+    {
+      "id": "sse-515450-official",
+      "title": "上交所515450产品资料与公告入口",
+      "category": "fund",
+      "impact": "neutral",
+      "summary": "用于核对ETF份额、净值、IOPV、分红和交易公告；官方披露优先于聚合行情。",
+      "url": "https://www.sse.com.cn/assortment/fund/etf/detail/index.shtml?FUNDID=515450",
+      "source": "上海证券交易所",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
+      "frequency": "event",
+      "quality": "verified",
+      "pointInTimeSafe": false
+    },
+    {
+      "id": "sp-index-methodology-watch",
+      "title": "标普红利低波指数方法与调整监控",
+      "category": "index",
+      "impact": "neutral",
+      "summary": "跟踪指数方法、再平衡和成分调整公告；仅在取得可验证时点后进入研究记录。",
+      "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-china-a-share-dividend-low-volatility-50-index/",
+      "source": "S&P Dow Jones Indices",
+      "asOf": "2026-08-06T12:23:22+08:00",
+      "retrievedAt": "2026-08-06T12:23:22+08:00",
+      "frequency": "event",
+      "quality": "verified",
+      "pointInTimeSafe": false
+    }
+  ],
+  "sourceMatrix": [
+    {
+      "id": "southern",
+      "name": "南方基金",
+      "role": "基金净值、公告、定期报告",
+      "url": "https://www.nffund.com/main/jjcp/fundproduct/008163.shtml"
+    },
+    {
+      "id": "sse",
+      "name": "上海证券交易所",
+      "role": "ETF产品资料、份额与公告",
+      "url": "https://www.sse.com.cn/assortment/fund/etf/detail/index.shtml?FUNDID=515450"
+    },
+    {
+      "id": "sp",
+      "name": "标普道琼斯指数",
+      "role": "指数方法与调整",
+      "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-china-a-share-dividend-low-volatility-50-index/"
+    },
+    {
+      "id": "chinabond",
+      "name": "中国债券信息网",
+      "role": "国债收益率",
+      "url": "https://yield.chinabond.com.cn/"
+    },
+    {
+      "id": "pbc",
+      "name": "中国人民银行",
+      "role": "利率与流动性",
+      "url": "https://www.pbc.gov.cn/"
+    },
+    {
+      "id": "nbs",
+      "name": "国家统计局",
+      "role": "PMI、CPI、PPI",
+      "url": "https://www.stats.gov.cn/"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "008163 量化研究终端",
+  "short_name": "008163研究",
+  "description": "南方标普红利低波50ETF联接A个人量化研究终端",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f2",
+  "theme_color": "#f3f5f2",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
