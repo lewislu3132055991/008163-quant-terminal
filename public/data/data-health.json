@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-07T18:35:30+08:00",
+  "generatedAt": "2026-08-08T00:15:52+08:00",
   "completeness": 94,
   "quoteConflict": false,
   "shareHistoryDays": 2,
@@ -8,57 +8,58 @@
     {
       "id": "eastmoney",
       "name": "东方财富行情",
-      "status": "failed",
-      "detail": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "status": "ok",
+      "detail": "报价、成交额和换手率已更新",
+      "lastSuccess": "2026-08-08T00:12:49+08:00"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-08-07T18:30:48+08:00"
+      "lastSuccess": "2026-08-08T00:12:51+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-08-07T18:33:13+08:00"
+      "lastSuccess": "2026-08-08T00:15:04+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-08-07T18:33:15+08:00"
+      "lastSuccess": "2026-08-08T00:15:06+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-08-07T18:33:17+08:00"
+      "lastSuccess": "2026-08-08T00:15:07+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-08-07T18:30:51+08:00"
+      "lastSuccess": "2026-08-08T00:12:53+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-08-07T18:30:52+08:00"
+      "lastSuccess": "2026-08-08T00:12:55+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
       "status": "ok",
       "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-08-07T18:35:30+08:00"
+      "lastSuccess": "2026-08-08T00:15:52+08:00"
     }
   ],
   "sourceMatrix": [
