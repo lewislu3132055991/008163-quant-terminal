@@ -1,47 +1,47 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-07T13:58:53+08:00",
+  "generatedAt": "2026-08-07T17:48:42+08:00",
   "breadth": {
     "value": 0.17274167987321712,
     "source": "最新披露持仓加权 / 腾讯复权行情",
-    "asOf": "2026-08-07T13:57:46+08:00",
-    "retrievedAt": "2026-08-07T13:58:53+08:00",
+    "asOf": "2026-08-07T17:47:55+08:00",
+    "retrievedAt": "2026-08-07T17:48:42+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pe": {
-    "value": 12.747299524564186,
+    "value": 12.755207606973059,
     "source": "最新披露持仓加权 / 腾讯个股PE",
-    "asOf": "2026-08-07T13:57:46+08:00",
-    "retrievedAt": "2026-08-07T13:58:53+08:00",
+    "asOf": "2026-08-07T17:47:55+08:00",
+    "retrievedAt": "2026-08-07T17:48:42+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pb": {
-    "value": 1.515746434231379,
+    "value": 1.5185990491283679,
     "source": "最新披露持仓加权 / 腾讯个股PB",
-    "asOf": "2026-08-07T13:57:46+08:00",
-    "retrievedAt": "2026-08-07T13:58:53+08:00",
+    "asOf": "2026-08-07T17:47:55+08:00",
+    "retrievedAt": "2026-08-07T17:48:42+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "roe": {
-    "value": 11.890725806752394,
+    "value": 11.905718008840367,
     "source": "披露持仓PB/PE推导ROE代理",
-    "asOf": "2026-08-07T13:57:46+08:00",
-    "retrievedAt": "2026-08-07T13:58:53+08:00",
+    "asOf": "2026-08-07T17:47:55+08:00",
+    "retrievedAt": "2026-08-07T17:48:42+08:00",
     "frequency": "quarterly",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "dividendYield": {
     "value": 0.0,
-    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
+    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
     "asOf": "2026-08-05T17:09:02+08:00",
-    "retrievedAt": "2026-08-07T13:57:44+08:00",
+    "retrievedAt": "2026-08-07T17:47:54+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
