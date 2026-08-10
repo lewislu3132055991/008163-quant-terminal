@@ -1,11 +1,11 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-10T18:49:00+08:00",
+  "generatedAt": "2026-08-10T19:31:22+08:00",
   "quote": {
     "value": 1.404,
-    "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-10 16:11:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:50+08:00",
+    "source": "东方财富",
+    "asOf": "2026-08-10T19:28:28+08:00",
+    "retrievedAt": "2026-08-10T19:30:34+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -14,7 +14,7 @@
     "value": 1.404,
     "source": "腾讯行情",
     "asOf": "2026-08-10T16:14:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:12+08:00",
+    "retrievedAt": "2026-08-10T19:30:34+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -24,7 +24,7 @@
     "value": 1.4048,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-08-10 16:11:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:50+08:00",
+    "retrievedAt": "2026-08-10T19:31:12+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -33,7 +33,7 @@
     "value": -0.06,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-08-10 16:11:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:50+08:00",
+    "retrievedAt": "2026-08-10T19:31:12+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -42,7 +42,7 @@
     "value": 1.26,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-08-10 16:11:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:50+08:00",
+    "retrievedAt": "2026-08-10T19:31:12+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -51,7 +51,7 @@
     "value": 245977439.0,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-08-10 16:11:59+08:00",
-    "retrievedAt": "2026-08-10T18:48:50+08:00",
+    "retrievedAt": "2026-08-10T19:31:12+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
