@@ -1,20 +1,20 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-08T00:15:52+08:00",
+  "generatedAt": "2026-08-10T13:14:41+08:00",
   "tenYearYield": {
     "value": 1.7114,
     "source": "中国债券信息网-中债国债收益率曲线",
     "asOf": "2026-08-07",
-    "retrievedAt": "2026-08-08T00:15:46+08:00",
+    "retrievedAt": "2026-08-10T13:14:36+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "dr007": {
-    "value": 1.361,
+    "value": 1.377,
     "source": "Shibor O/N流动性代理",
-    "asOf": "2026-08-07",
-    "retrievedAt": "2026-08-08T00:15:47+08:00",
+    "asOf": "2026-08-10",
+    "retrievedAt": "2026-08-10T13:14:37+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
