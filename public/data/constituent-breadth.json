@@ -1,50 +1,121 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-11T00:21:14+08:00",
+  "generatedAt": "2026-08-11T10:33:44+08:00",
   "breadth": {
-    "value": 0.39904912836767037,
-    "source": "最新披露持仓加权 / 腾讯复权行情（上次成功值）",
-    "asOf": "2026-08-10T19:30:35+08:00",
-    "retrievedAt": "2026-08-11T00:15:17+08:00",
+    "value": 0.2871632329635499,
+    "source": "最新披露持仓加权 / 腾讯复权行情",
+    "asOf": "2026-08-11T10:31:54+08:00",
+    "retrievedAt": "2026-08-11T10:33:44+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pe": {
-    "value": 12.978434231378762,
-    "source": "最新披露持仓加权 / 腾讯个股PE（上次成功值）",
-    "asOf": "2026-08-10T19:30:35+08:00",
-    "retrievedAt": "2026-08-11T00:15:17+08:00",
+    "value": 12.969242472266245,
+    "source": "最新披露持仓加权 / 腾讯个股PE",
+    "asOf": "2026-08-11T10:31:54+08:00",
+    "retrievedAt": "2026-08-11T10:33:44+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pb": {
-    "value": 1.5462567353407288,
-    "source": "最新披露持仓加权 / 腾讯个股PB（上次成功值）",
-    "asOf": "2026-08-10T19:30:35+08:00",
-    "retrievedAt": "2026-08-11T00:15:17+08:00",
+    "value": 1.5446434231378763,
+    "source": "最新披露持仓加权 / 腾讯个股PB",
+    "asOf": "2026-08-11T10:31:54+08:00",
+    "retrievedAt": "2026-08-11T10:33:44+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "roe": {
-    "value": 11.914046854760404,
-    "source": "披露持仓PB/PE推导ROE代理（上次成功值）",
-    "asOf": "2026-08-10T19:30:35+08:00",
-    "retrievedAt": "2026-08-11T00:15:17+08:00",
+    "value": 11.910051234225753,
+    "source": "披露持仓PB/PE推导ROE代理",
+    "asOf": "2026-08-11T10:31:54+08:00",
+    "retrievedAt": "2026-08-11T10:33:44+08:00",
     "frequency": "quarterly",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "dividendYield": {
     "value": 0.0,
-    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
+    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
     "asOf": "2026-08-05T17:09:02+08:00",
-    "retrievedAt": "2026-08-11T00:15:17+08:00",
+    "retrievedAt": "2026-08-11T10:31:53+08:00",
     "frequency": "daily",
     "quality": "stale",
     "pointInTimeSafe": false
   },
-  "constituents": []
+  "constituents": [
+    {
+      "code": "000651",
+      "name": "格力电器",
+      "weight": 4.08,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "600642",
+      "name": "申能股份",
+      "weight": 3.65,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "600023",
+      "name": "浙能电力",
+      "weight": 3.64,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "600177",
+      "name": "雅戈尔",
+      "weight": 3.61,
+      "aboveMa20": true,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "601088",
+      "name": "中国神华",
+      "weight": 3.06,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "001286",
+      "name": "陕西能源",
+      "weight": 2.75,
+      "aboveMa20": true,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "600350",
+      "name": "山东高速",
+      "weight": 2.73,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "000895",
+      "name": "双汇发展",
+      "weight": 2.71,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "600352",
+      "name": "浙江龙盛",
+      "weight": 2.7,
+      "aboveMa20": true,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    },
+    {
+      "code": "601668",
+      "name": "中国建筑",
+      "weight": 2.62,
+      "aboveMa20": false,
+      "holdingAsOf": "2026年2季度股票投资明细"
+    }
+  ]
 }
