@@ -1,47 +1,47 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-11T22:35:00+08:00",
+  "generatedAt": "2026-08-12T10:50:02+08:00",
   "breadth": {
-    "value": 0.26973058637083996,
+    "value": 0.17274167987321712,
     "source": "最新披露持仓加权 / 腾讯复权行情",
-    "asOf": "2026-08-11T22:34:17+08:00",
-    "retrievedAt": "2026-08-11T22:35:00+08:00",
+    "asOf": "2026-08-12T10:49:20+08:00",
+    "retrievedAt": "2026-08-12T10:50:02+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pe": {
-    "value": 12.960776545166405,
+    "value": 12.931511885895405,
     "source": "最新披露持仓加权 / 腾讯个股PE",
-    "asOf": "2026-08-11T22:34:17+08:00",
-    "retrievedAt": "2026-08-11T22:35:00+08:00",
+    "asOf": "2026-08-12T10:49:20+08:00",
+    "retrievedAt": "2026-08-12T10:50:02+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "pb": {
-    "value": 1.5447416798732172,
+    "value": 1.5330871632329637,
     "source": "最新披露持仓加权 / 腾讯个股PB",
-    "asOf": "2026-08-11T22:34:17+08:00",
-    "retrievedAt": "2026-08-11T22:35:00+08:00",
+    "asOf": "2026-08-12T10:49:20+08:00",
+    "retrievedAt": "2026-08-12T10:50:02+08:00",
     "frequency": "daily",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "roe": {
-    "value": 11.918588940176686,
+    "value": 11.855436369394091,
     "source": "披露持仓PB/PE推导ROE代理",
-    "asOf": "2026-08-11T22:34:17+08:00",
-    "retrievedAt": "2026-08-11T22:35:00+08:00",
+    "asOf": "2026-08-12T10:49:20+08:00",
+    "retrievedAt": "2026-08-12T10:50:02+08:00",
     "frequency": "quarterly",
     "quality": "estimated",
     "pointInTimeSafe": false
   },
   "dividendYield": {
     "value": 0.0,
-    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
+    "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
     "asOf": "2026-08-05T17:09:02+08:00",
-    "retrievedAt": "2026-08-11T22:34:17+08:00",
+    "retrievedAt": "2026-08-12T10:49:19+08:00",
     "frequency": "daily",
     "quality": "stale",
     "pointInTimeSafe": false
@@ -79,7 +79,7 @@
       "code": "601088",
       "name": "中国神华",
       "weight": 3.06,
-      "aboveMa20": true,
+      "aboveMa20": false,
       "holdingAsOf": "2026年2季度股票投资明细"
     },
     {

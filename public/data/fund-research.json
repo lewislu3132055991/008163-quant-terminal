@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-11T22:35:00+08:00",
+  "generatedAt": "2026-08-12T10:50:02+08:00",
   "fundCode": "008163",
   "targetEtf": "515450",
   "profile": {
@@ -22,7 +22,7 @@
       "value": 1.0377,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-11",
-      "retrievedAt": "2026-08-11T22:35:00+08:00",
+      "retrievedAt": "2026-08-12T10:50:02+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -31,7 +31,7 @@
       "value": 1.7407,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-11",
-      "retrievedAt": "2026-08-11T22:35:00+08:00",
+      "retrievedAt": "2026-08-12T10:50:02+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -40,7 +40,7 @@
       "value": -0.1732,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-11",
-      "retrievedAt": "2026-08-11T22:35:00+08:00",
+      "retrievedAt": "2026-08-12T10:50:02+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -7974,10 +7974,10 @@
     }
   ],
   "trackingError": {
-    "value": 3.9962,
+    "value": 3.9953,
     "source": "008163净值 / 515450复权行情计算",
     "asOf": "2026-08-11",
-    "retrievedAt": "2026-08-11T22:34:17+08:00",
+    "retrievedAt": "2026-08-12T10:49:19+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
