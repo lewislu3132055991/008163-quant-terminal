@@ -1,11 +1,11 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-12T16:05:03+08:00",
+  "generatedAt": "2026-08-12T16:45:35+08:00",
   "quote": {
     "value": 1.4,
     "source": "东方财富",
-    "asOf": "2026-08-12T16:02:16+08:00",
-    "retrievedAt": "2026-08-12T16:04:18+08:00",
+    "asOf": "2026-08-12T16:42:45+08:00",
+    "retrievedAt": "2026-08-12T16:44:50+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -13,8 +13,8 @@
   "backupQuote": {
     "value": 1.4,
     "source": "腾讯行情",
-    "asOf": "2026-08-12T16:02:06+08:00",
-    "retrievedAt": "2026-08-12T16:04:18+08:00",
+    "asOf": "2026-08-12T16:14:36+08:00",
+    "retrievedAt": "2026-08-12T16:44:50+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -23,8 +23,8 @@
   "iopv": {
     "value": 1.3983,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-12 16:04:06+08:00",
-    "retrievedAt": "2026-08-12T16:04:54+08:00",
+    "asOf": "2026-08-12 16:11:36+08:00",
+    "retrievedAt": "2026-08-12T16:45:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -32,8 +32,8 @@
   "premiumRate": {
     "value": 0.12,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-12 16:04:06+08:00",
-    "retrievedAt": "2026-08-12T16:04:54+08:00",
+    "asOf": "2026-08-12 16:11:36+08:00",
+    "retrievedAt": "2026-08-12T16:45:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -41,8 +41,8 @@
   "turnoverRate": {
     "value": 0.79,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-12 16:04:06+08:00",
-    "retrievedAt": "2026-08-12T16:04:54+08:00",
+    "asOf": "2026-08-12 16:11:36+08:00",
+    "retrievedAt": "2026-08-12T16:45:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -50,8 +50,8 @@
   "amount": {
     "value": 153926245.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-12 16:04:06+08:00",
-    "retrievedAt": "2026-08-12T16:04:54+08:00",
+    "asOf": "2026-08-12 16:11:36+08:00",
+    "retrievedAt": "2026-08-12T16:45:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
