@@ -1,64 +1,65 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-12T22:35:49+08:00",
+  "generatedAt": "2026-08-13T10:52:24+08:00",
   "completeness": 88,
   "quoteConflict": false,
-  "shareHistoryDays": 5,
+  "shareHistoryDays": 6,
   "sources": [
     {
       "id": "eastmoney",
       "name": "东方财富行情",
-      "status": "failed",
-      "detail": "HTTP Error 502: Bad Gateway"
+      "status": "ok",
+      "detail": "报价、成交额和换手率已更新",
+      "lastSuccess": "2026-08-13T10:49:46+08:00"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-08-12T22:32:38+08:00"
+      "lastSuccess": "2026-08-13T10:49:47+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-08-12T22:34:53+08:00"
+      "lastSuccess": "2026-08-13T10:51:36+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-08-12T22:35:00+08:00"
+      "lastSuccess": "2026-08-13T10:51:38+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-08-12T22:35:01+08:00"
+      "lastSuccess": "2026-08-13T10:51:38+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-08-12T22:32:41+08:00"
+      "lastSuccess": "2026-08-13T10:49:50+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-08-12T22:32:42+08:00"
+      "lastSuccess": "2026-08-13T10:49:52+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
-      "status": "ok",
-      "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-08-12T22:35:49+08:00"
+      "status": "delayed",
+      "detail": "部分扩展源失败：中债收益率：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "lastSuccess": "2026-08-13T10:52:24+08:00"
     }
   ],
   "sourceMatrix": [
