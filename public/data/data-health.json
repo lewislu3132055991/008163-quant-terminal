@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-21T15:29:49+08:00",
+  "generatedAt": "2026-08-21T16:04:12+08:00",
   "completeness": 88,
   "quoteConflict": false,
   "shareHistoryDays": 12,
@@ -8,57 +8,58 @@
     {
       "id": "eastmoney",
       "name": "东方财富行情",
-      "status": "failed",
-      "detail": "HTTP Error 502: Bad Gateway"
+      "status": "ok",
+      "detail": "报价、成交额和换手率已更新",
+      "lastSuccess": "2026-08-21T16:01:22+08:00"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-08-21T15:27:00+08:00"
+      "lastSuccess": "2026-08-21T16:01:24+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-08-21T15:28:55+08:00"
+      "lastSuccess": "2026-08-21T16:03:18+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-08-21T15:28:58+08:00"
+      "lastSuccess": "2026-08-21T16:03:21+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-08-21T15:28:59+08:00"
+      "lastSuccess": "2026-08-21T16:03:22+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-08-21T15:27:03+08:00"
+      "lastSuccess": "2026-08-21T16:01:26+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-08-21T15:27:04+08:00"
+      "lastSuccess": "2026-08-21T16:01:27+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
       "status": "ok",
       "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-08-21T15:29:49+08:00"
+      "lastSuccess": "2026-08-21T16:04:12+08:00"
     }
   ],
   "sourceMatrix": [
