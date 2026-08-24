@@ -1,71 +1,63 @@
 {
   "version": "1.0",
   "mode": "live",
-  "generatedAt": "2026-08-21T22:00:58+08:00",
+  "generatedAt": "2026-08-24T10:02:16+08:00",
   "quote": {
-    "value": 1.398,
+    "value": 1.406,
     "source": "东方财富",
-    "asOf": "2026-08-21T21:57:53+08:00",
-    "retrievedAt": "2026-08-21T22:00:09+08:00",
+    "asOf": "2026-08-24T09:59:37+08:00",
+    "retrievedAt": "2026-08-24T10:01:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "backupQuote": {
-    "value": 1.398,
+    "value": 1.406,
     "source": "腾讯行情",
-    "asOf": "2026-08-21T16:14:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:09+08:00",
+    "asOf": "2026-08-24T09:59:35+08:00",
+    "retrievedAt": "2026-08-24T10:01:25+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
-  "previousClose": 1.41,
+  "previousClose": 1.398,
   "iopv": {
-    "value": 1.3953,
+    "value": 1.4061,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-21 16:11:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:48+08:00",
+    "asOf": "2026-08-24 10:01:41+08:00",
+    "retrievedAt": "2026-08-24T10:02:05+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
   },
   "premiumRate": {
-    "value": 0.19,
+    "value": -0.08,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-21 16:11:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:48+08:00",
+    "asOf": "2026-08-24 10:01:41+08:00",
+    "retrievedAt": "2026-08-24T10:02:05+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
   },
   "turnoverRate": {
-    "value": 0.91,
+    "value": 0.3,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-21 16:11:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:48+08:00",
+    "asOf": "2026-08-24 10:01:41+08:00",
+    "retrievedAt": "2026-08-24T10:02:05+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "amount": {
-    "value": 179123940.0,
+    "value": 58655223.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-21 16:11:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:48+08:00",
+    "asOf": "2026-08-24 10:01:41+08:00",
+    "retrievedAt": "2026-08-24T10:02:05+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "daily": [
-    {
-      "time": "2023-12-28",
-      "open": 0.986,
-      "close": 0.988,
-      "high": 0.992,
-      "low": 0.985,
-      "volume": 429526
-    },
     {
       "time": "2023-12-29",
       "open": 0.987,
@@ -5180,74 +5172,22 @@
     },
     {
       "time": "2026-08-21",
-      "open": 1.41,
-      "close": 1.4,
-      "high": 1.41,
-      "low": 1.4,
+      "open": 1.407,
+      "close": 1.398,
+      "high": 1.409,
+      "low": 1.396,
       "volume": 1279091
+    },
+    {
+      "time": "2026-08-24",
+      "open": 1.4,
+      "close": 1.41,
+      "high": 1.41,
+      "low": 1.39,
+      "volume": 412757
     }
   ],
   "intraday": [
-    {
-      "time": "2026-08-21T09:35:00+08:00",
-      "open": 1.407,
-      "close": 1.406,
-      "high": 1.408,
-      "low": 1.405,
-      "volume": 123758,
-      "vwap": 1.406,
-      "iopv": 1.406
-    },
-    {
-      "time": "2026-08-21T09:40:00+08:00",
-      "open": 1.406,
-      "close": 1.407,
-      "high": 1.409,
-      "low": 1.406,
-      "volume": 29768,
-      "vwap": 1.406,
-      "iopv": 1.407
-    },
-    {
-      "time": "2026-08-21T09:45:00+08:00",
-      "open": 1.407,
-      "close": 1.405,
-      "high": 1.408,
-      "low": 1.404,
-      "volume": 100916,
-      "vwap": 1.406,
-      "iopv": 1.405
-    },
-    {
-      "time": "2026-08-21T09:50:00+08:00",
-      "open": 1.404,
-      "close": 1.404,
-      "high": 1.405,
-      "low": 1.403,
-      "volume": 40069,
-      "vwap": 1.406,
-      "iopv": 1.404
-    },
-    {
-      "time": "2026-08-21T09:55:00+08:00",
-      "open": 1.404,
-      "close": 1.401,
-      "high": 1.404,
-      "low": 1.4,
-      "volume": 78265,
-      "vwap": 1.405,
-      "iopv": 1.401
-    },
-    {
-      "time": "2026-08-21T10:00:00+08:00",
-      "open": 1.401,
-      "close": 1.402,
-      "high": 1.403,
-      "low": 1.401,
-      "volume": 65251,
-      "vwap": 1.405,
-      "iopv": 1.402
-    },
     {
       "time": "2026-08-21T10:05:00+08:00",
       "open": 1.401,
@@ -5255,7 +5195,7 @@
       "high": 1.402,
       "low": 1.4,
       "volume": 15908,
-      "vwap": 1.405,
+      "vwap": 1.401,
       "iopv": 1.401
     },
     {
@@ -5265,7 +5205,7 @@
       "high": 1.401,
       "low": 1.399,
       "volume": 51581,
-      "vwap": 1.404,
+      "vwap": 1.4,
       "iopv": 1.399
     },
     {
@@ -5275,7 +5215,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 15737,
-      "vwap": 1.404,
+      "vwap": 1.4,
       "iopv": 1.399
     },
     {
@@ -5285,7 +5225,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 27528,
-      "vwap": 1.404,
+      "vwap": 1.4,
       "iopv": 1.4
     },
     {
@@ -5295,7 +5235,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 8743,
-      "vwap": 1.404,
+      "vwap": 1.4,
       "iopv": 1.4
     },
     {
@@ -5305,7 +5245,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 18159,
-      "vwap": 1.403,
+      "vwap": 1.4,
       "iopv": 1.398
     },
     {
@@ -5315,7 +5255,7 @@
       "high": 1.399,
       "low": 1.397,
       "volume": 44064,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5325,7 +5265,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 8687,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5335,7 +5275,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 6182,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5345,7 +5285,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 10389,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5355,7 +5295,7 @@
       "high": 1.399,
       "low": 1.398,
       "volume": 9056,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5365,7 +5305,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 2253,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5375,7 +5315,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 3257,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5385,7 +5325,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 1670,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5395,7 +5335,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 26263,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5405,7 +5345,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 20000,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5415,7 +5355,7 @@
       "high": 1.401,
       "low": 1.399,
       "volume": 17155,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5425,7 +5365,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 5087,
-      "vwap": 1.403,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5435,7 +5375,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 11738,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5445,7 +5385,7 @@
       "high": 1.399,
       "low": 1.397,
       "volume": 6362,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5455,7 +5395,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 10904,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5465,7 +5405,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 7471,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5475,7 +5415,7 @@
       "high": 1.399,
       "low": 1.397,
       "volume": 33947,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5485,7 +5425,7 @@
       "high": 1.399,
       "low": 1.398,
       "volume": 12550,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5495,7 +5435,7 @@
       "high": 1.399,
       "low": 1.397,
       "volume": 9223,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5505,7 +5445,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 16343,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5515,7 +5455,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 9864,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.4
     },
     {
@@ -5525,7 +5465,7 @@
       "high": 1.4,
       "low": 1.399,
       "volume": 6628,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5535,7 +5475,7 @@
       "high": 1.399,
       "low": 1.398,
       "volume": 15812,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5545,7 +5485,7 @@
       "high": 1.399,
       "low": 1.398,
       "volume": 7274,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5555,7 +5495,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 31497,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5565,7 +5505,7 @@
       "high": 1.4,
       "low": 1.398,
       "volume": 20102,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.399
     },
     {
@@ -5575,7 +5515,7 @@
       "high": 1.399,
       "low": 1.397,
       "volume": 43073,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5585,7 +5525,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 6166,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5595,7 +5535,7 @@
       "high": 1.398,
       "low": 1.397,
       "volume": 5933,
-      "vwap": 1.402,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5605,7 +5545,7 @@
       "high": 1.398,
       "low": 1.396,
       "volume": 59953,
-      "vwap": 1.401,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5615,7 +5555,7 @@
       "high": 1.397,
       "low": 1.396,
       "volume": 9321,
-      "vwap": 1.401,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5625,7 +5565,7 @@
       "high": 1.397,
       "low": 1.396,
       "volume": 21061,
-      "vwap": 1.401,
+      "vwap": 1.399,
       "iopv": 1.396
     },
     {
@@ -5635,7 +5575,7 @@
       "high": 1.398,
       "low": 1.396,
       "volume": 41455,
-      "vwap": 1.401,
+      "vwap": 1.399,
       "iopv": 1.398
     },
     {
@@ -5645,7 +5585,7 @@
       "high": 1.398,
       "low": 1.396,
       "volume": 95072,
-      "vwap": 1.401,
+      "vwap": 1.399,
       "iopv": 1.397
     },
     {
@@ -5655,7 +5595,7 @@
       "high": 1.398,
       "low": 1.396,
       "volume": 52663,
-      "vwap": 1.401,
+      "vwap": 1.398,
       "iopv": 1.397
     },
     {
@@ -5665,8 +5605,68 @@
       "high": 1.398,
       "low": 1.396,
       "volume": 14933,
-      "vwap": 1.401,
+      "vwap": 1.398,
       "iopv": 1.398
+    },
+    {
+      "time": "2026-08-24T09:35:00+08:00",
+      "open": 1.395,
+      "close": 1.396,
+      "high": 1.397,
+      "low": 1.394,
+      "volume": 113516,
+      "vwap": 1.398,
+      "iopv": 1.396
+    },
+    {
+      "time": "2026-08-24T09:40:00+08:00",
+      "open": 1.397,
+      "close": 1.401,
+      "high": 1.401,
+      "low": 1.396,
+      "volume": 55369,
+      "vwap": 1.398,
+      "iopv": 1.401
+    },
+    {
+      "time": "2026-08-24T09:45:00+08:00",
+      "open": 1.401,
+      "close": 1.403,
+      "high": 1.404,
+      "low": 1.4,
+      "volume": 133261,
+      "vwap": 1.399,
+      "iopv": 1.403
+    },
+    {
+      "time": "2026-08-24T09:50:00+08:00",
+      "open": 1.403,
+      "close": 1.404,
+      "high": 1.404,
+      "low": 1.401,
+      "volume": 22609,
+      "vwap": 1.399,
+      "iopv": 1.404
+    },
+    {
+      "time": "2026-08-24T09:55:00+08:00",
+      "open": 1.403,
+      "close": 1.406,
+      "high": 1.406,
+      "low": 1.403,
+      "volume": 52361,
+      "vwap": 1.399,
+      "iopv": 1.406
+    },
+    {
+      "time": "2026-08-24T10:00:00+08:00",
+      "open": 1.406,
+      "close": 1.406,
+      "high": 1.407,
+      "low": 1.405,
+      "volume": 35618,
+      "vwap": 1.399,
+      "iopv": 1.406
     }
   ],
   "fundProfile": {
@@ -5688,7 +5688,7 @@
       "value": 1.0323,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -5697,7 +5697,7 @@
       "value": 1.7353,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -5706,7 +5706,7 @@
       "value": -0.9879,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -13681,10 +13681,6 @@
   ],
   "benchmarkSeries": [
     {
-      "time": "2023-12-28",
-      "value": 3.209
-    },
-    {
       "time": "2023-12-29",
       "value": 3.219
     },
@@ -16243,59 +16239,63 @@
     {
       "time": "2026-08-21",
       "value": 4.68
+    },
+    {
+      "time": "2026-08-24",
+      "value": 4.64
     }
   ],
   "metrics": {
     "trackingError": {
-      "value": 3.9958,
+      "value": 3.99,
       "source": "008163净值 / 515450复权行情计算",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:09+08:00",
+      "retrievedAt": "2026-08-24T10:01:25+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
     },
     "dividendYield": {
       "value": 0.0,
-      "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
+      "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
       "asOf": "2026-08-05T17:09:02+08:00",
-      "retrievedAt": "2026-08-21T22:00:09+08:00",
+      "retrievedAt": "2026-08-24T10:01:25+08:00",
       "frequency": "daily",
       "quality": "stale",
       "pointInTimeSafe": false
     },
     "pe": {
-      "value": 12.778817749603805,
+      "value": 12.864107765451665,
       "source": "最新披露持仓加权 / 腾讯个股PE",
-      "asOf": "2026-08-21T22:00:10+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:01:26+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
     },
     "pb": {
-      "value": 1.520228209191759,
+      "value": 1.5311949286846278,
       "source": "最新披露持仓加权 / 腾讯个股PB",
-      "asOf": "2026-08-21T22:00:10+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:01:26+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
     },
     "roe": {
-      "value": 11.896469915919194,
+      "value": 11.90284593850234,
       "source": "披露持仓PB/PE推导ROE代理",
-      "asOf": "2026-08-21T22:00:10+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:01:26+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "quarterly",
       "quality": "estimated",
       "pointInTimeSafe": false
     },
     "breadth": {
-      "value": 0.34072900158478603,
+      "value": 0.5423137876386688,
       "source": "最新披露持仓加权 / 腾讯复权行情",
-      "asOf": "2026-08-21T22:00:10+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:01:26+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16304,7 +16304,7 @@
       "value": 1.6839,
       "source": "中国债券信息网-中债国债收益率曲线",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:52+08:00",
+      "retrievedAt": "2026-08-24T10:02:09+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -16313,25 +16313,25 @@
       "value": 1.434,
       "source": "Shibor O/N流动性代理",
       "asOf": "2026-08-21",
-      "retrievedAt": "2026-08-21T22:00:54+08:00",
+      "retrievedAt": "2026-08-24T10:02:10+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
     },
     "northboundProxy": {
-      "value": -0.24870612493226757,
+      "value": 0.1366843835884828,
       "source": "ETF主力资金净流入占比（非北向资金）",
-      "asOf": "2026-08-21 16:11:38+08:00",
-      "retrievedAt": "2026-08-21T22:00:48+08:00",
+      "asOf": "2026-08-24 10:01:41+08:00",
+      "retrievedAt": "2026-08-24T10:02:05+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
     },
     "shareChange20d": {
       "value": 0.0,
-      "source": "ETF份额历史积累中（12/20）",
-      "asOf": "2026-08-21T22:00:58+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "source": "ETF份额历史积累中（13/20）",
+      "asOf": "2026-08-24T10:02:16+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "daily",
       "quality": "unavailable",
       "pointInTimeSafe": false
@@ -16346,8 +16346,8 @@
       "summary": "采集任务保留官方核对入口；报告内容经结构化解析后再进入跟踪误差与资产配置因子。",
       "url": "https://www.nffund.com/main/jjcp/fundproduct/008163.shtml",
       "source": "南方基金",
-      "asOf": "2026-08-21T22:00:58+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:02:16+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16360,8 +16360,8 @@
       "summary": "用于核对ETF份额、净值、IOPV、分红和交易公告；官方披露优先于聚合行情。",
       "url": "https://www.sse.com.cn/assortment/fund/etf/detail/index.shtml?FUNDID=515450",
       "source": "上海证券交易所",
-      "asOf": "2026-08-21T22:00:58+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:02:16+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16374,8 +16374,8 @@
       "summary": "跟踪指数方法、再平衡和成分调整公告；仅在取得可验证时点后进入研究记录。",
       "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-china-a-share-dividend-low-volatility-50-index/",
       "source": "S&P Dow Jones Indices",
-      "asOf": "2026-08-21T22:00:58+08:00",
-      "retrievedAt": "2026-08-21T22:00:58+08:00",
+      "asOf": "2026-08-24T10:02:16+08:00",
+      "retrievedAt": "2026-08-24T10:02:16+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16387,56 +16387,56 @@
       "name": "东方财富行情",
       "status": "ok",
       "detail": "报价、成交额和换手率已更新",
-      "lastSuccess": "2026-08-21T21:57:53+08:00"
+      "lastSuccess": "2026-08-24T09:59:37+08:00"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-08-21T21:57:54+08:00"
+      "lastSuccess": "2026-08-24T09:59:39+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-08-21T22:00:06+08:00"
+      "lastSuccess": "2026-08-24T10:01:21+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-08-21T22:00:08+08:00"
+      "lastSuccess": "2026-08-24T10:01:23+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-08-21T22:00:09+08:00"
+      "lastSuccess": "2026-08-24T10:01:25+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-08-21T21:57:57+08:00"
+      "lastSuccess": "2026-08-24T09:59:41+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-08-21T21:57:59+08:00"
+      "lastSuccess": "2026-08-24T09:59:43+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
       "status": "ok",
       "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-08-21T22:00:58+08:00"
+      "lastSuccess": "2026-08-24T10:02:16+08:00"
     }
   ],
   "constituents": [
@@ -16451,7 +16451,7 @@
       "code": "600642",
       "name": "申能股份",
       "weight": 3.65,
-      "aboveMa20": false,
+      "aboveMa20": true,
       "holdingAsOf": "2026年2季度股票投资明细"
     },
     {
@@ -16493,7 +16493,7 @@
       "code": "000895",
       "name": "双汇发展",
       "weight": 2.71,
-      "aboveMa20": false,
+      "aboveMa20": true,
       "holdingAsOf": "2026年2季度股票投资明细"
     },
     {
@@ -16512,16 +16512,16 @@
     }
   ],
   "etfShare": {
-    "value": 14132835072.0,
+    "value": 14165835008.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-21 16:11:38+08:00",
-    "retrievedAt": "2026-08-21T22:00:48+08:00",
+    "asOf": "2026-08-24 10:01:41+08:00",
+    "retrievedAt": "2026-08-24T10:02:05+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "backtest": {
-    "asOf": "2026-08-21",
+    "asOf": "2026-08-24",
     "methodology": "504日训练 / 126日验证 / 126日测试；仅用前一日信号，仓位75%—90%",
     "testPeriods": 7,
     "annualizedReturn": 10.212,
