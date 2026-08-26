@@ -1,12 +1,12 @@
 {
   "version": "1.0",
   "mode": "live",
-  "generatedAt": "2026-08-26T15:32:34+08:00",
+  "generatedAt": "2026-08-26T16:06:29+08:00",
   "quote": {
     "value": 1.418,
-    "source": "东方财富",
-    "asOf": "2026-08-26T15:29:45+08:00",
-    "retrievedAt": "2026-08-26T15:31:50+08:00",
+    "source": "AKShare / 东方财富ETF行情",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -14,8 +14,8 @@
   "backupQuote": {
     "value": 1.418,
     "source": "腾讯行情",
-    "asOf": "2026-08-26T15:29:45+08:00",
-    "retrievedAt": "2026-08-26T15:31:50+08:00",
+    "asOf": "2026-08-26T16:04:05+08:00",
+    "retrievedAt": "2026-08-26T16:05:45+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -24,8 +24,8 @@
   "iopv": {
     "value": 1.4176,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-26 15:31:35+08:00",
-    "retrievedAt": "2026-08-26T15:32:25+08:00",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -33,8 +33,8 @@
   "premiumRate": {
     "value": 0.03,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-26 15:31:35+08:00",
-    "retrievedAt": "2026-08-26T15:32:25+08:00",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -42,8 +42,8 @@
   "turnoverRate": {
     "value": 1.32,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-26 15:31:35+08:00",
-    "retrievedAt": "2026-08-26T15:32:25+08:00",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -51,8 +51,8 @@
   "amount": {
     "value": 264119474.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-26 15:31:35+08:00",
-    "retrievedAt": "2026-08-26T15:32:25+08:00",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -5688,7 +5688,7 @@
       "value": 1.0437,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-25",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -5697,7 +5697,7 @@
       "value": 1.7467,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-25",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -5706,7 +5706,7 @@
       "value": 0.1151,
       "source": "东方财富历史净值（基金公司净值聚合）",
       "asOf": "2026-08-25",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -16260,16 +16260,16 @@
       "value": 4.0059,
       "source": "008163净值 / 515450复权行情计算",
       "asOf": "2026-08-25",
-      "retrievedAt": "2026-08-26T15:31:50+08:00",
+      "retrievedAt": "2026-08-26T16:05:45+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
     },
     "dividendYield": {
       "value": 0.0,
-      "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
+      "source": "标普指数资料（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）（上次成功值）",
       "asOf": "2026-08-05T17:09:02+08:00",
-      "retrievedAt": "2026-08-26T15:31:50+08:00",
+      "retrievedAt": "2026-08-26T16:05:45+08:00",
       "frequency": "daily",
       "quality": "stale",
       "pointInTimeSafe": false
@@ -16277,8 +16277,8 @@
     "pe": {
       "value": 12.973527733755942,
       "source": "最新披露持仓加权 / 腾讯个股PE",
-      "asOf": "2026-08-26T15:31:51+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:05:47+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16286,8 +16286,8 @@
     "pb": {
       "value": 1.5345895404120447,
       "source": "最新披露持仓加权 / 腾讯个股PB",
-      "asOf": "2026-08-26T15:31:51+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:05:47+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16295,8 +16295,8 @@
     "roe": {
       "value": 11.828621882228548,
       "source": "披露持仓PB/PE推导ROE代理",
-      "asOf": "2026-08-26T15:31:51+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:05:47+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "quarterly",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16304,8 +16304,8 @@
     "breadth": {
       "value": 0.6583201267828843,
       "source": "最新披露持仓加权 / 腾讯复权行情",
-      "asOf": "2026-08-26T15:31:51+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:05:47+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16314,7 +16314,7 @@
       "value": 1.6815,
       "source": "中国债券信息网-中债国债收益率曲线",
       "asOf": "2026-08-25",
-      "retrievedAt": "2026-08-26T15:32:29+08:00",
+      "retrievedAt": "2026-08-26T16:06:24+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -16323,7 +16323,7 @@
       "value": 1.412,
       "source": "Shibor O/N流动性代理",
       "asOf": "2026-08-26",
-      "retrievedAt": "2026-08-26T15:32:30+08:00",
+      "retrievedAt": "2026-08-26T16:06:25+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -16331,8 +16331,8 @@
     "northboundProxy": {
       "value": 0.01772359277074738,
       "source": "ETF主力资金净流入占比（非北向资金）",
-      "asOf": "2026-08-26 15:31:35+08:00",
-      "retrievedAt": "2026-08-26T15:32:25+08:00",
+      "asOf": "2026-08-26 16:05:35+08:00",
+      "retrievedAt": "2026-08-26T16:06:21+08:00",
       "frequency": "daily",
       "quality": "estimated",
       "pointInTimeSafe": false
@@ -16340,8 +16340,8 @@
     "shareChange20d": {
       "value": 0.0,
       "source": "ETF份额历史积累中（15/20）",
-      "asOf": "2026-08-26T15:32:34+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:06:29+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "daily",
       "quality": "unavailable",
       "pointInTimeSafe": false
@@ -16356,8 +16356,8 @@
       "summary": "采集任务保留官方核对入口；报告内容经结构化解析后再进入跟踪误差与资产配置因子。",
       "url": "https://www.nffund.com/main/jjcp/fundproduct/008163.shtml",
       "source": "南方基金",
-      "asOf": "2026-08-26T15:32:34+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:06:29+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16370,8 +16370,8 @@
       "summary": "用于核对ETF份额、净值、IOPV、分红和交易公告；官方披露优先于聚合行情。",
       "url": "https://www.sse.com.cn/assortment/fund/etf/detail/index.shtml?FUNDID=515450",
       "source": "上海证券交易所",
-      "asOf": "2026-08-26T15:32:34+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:06:29+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16384,8 +16384,8 @@
       "summary": "跟踪指数方法、再平衡和成分调整公告；仅在取得可验证时点后进入研究记录。",
       "url": "https://www.spglobal.com/spdji/en/indices/dividends-factors/sp-china-a-share-dividend-low-volatility-50-index/",
       "source": "S&P Dow Jones Indices",
-      "asOf": "2026-08-26T15:32:34+08:00",
-      "retrievedAt": "2026-08-26T15:32:34+08:00",
+      "asOf": "2026-08-26T16:06:29+08:00",
+      "retrievedAt": "2026-08-26T16:06:29+08:00",
       "frequency": "event",
       "quality": "verified",
       "pointInTimeSafe": false
@@ -16395,58 +16395,57 @@
     {
       "id": "eastmoney",
       "name": "东方财富行情",
-      "status": "ok",
-      "detail": "报价、成交额和换手率已更新",
-      "lastSuccess": "2026-08-26T15:29:45+08:00"
+      "status": "failed",
+      "detail": "HTTP Error 502: Bad Gateway"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-08-26T15:29:46+08:00"
+      "lastSuccess": "2026-08-26T16:04:09+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-08-26T15:31:48+08:00"
+      "lastSuccess": "2026-08-26T16:05:42+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-08-26T15:31:49+08:00"
+      "lastSuccess": "2026-08-26T16:05:45+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-08-26T15:31:50+08:00"
+      "lastSuccess": "2026-08-26T16:05:45+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-08-26T15:29:48+08:00"
+      "lastSuccess": "2026-08-26T16:04:12+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-08-26T15:29:50+08:00"
+      "lastSuccess": "2026-08-26T16:04:13+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
       "status": "ok",
       "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-08-26T15:32:34+08:00"
+      "lastSuccess": "2026-08-26T16:06:29+08:00"
     }
   ],
   "constituents": [
@@ -16522,10 +16521,10 @@
     }
   ],
   "etfShare": {
-    "value": 14150834944.0,
+    "value": 14108335104.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-08-26 15:31:35+08:00",
-    "retrievedAt": "2026-08-26T15:32:25+08:00",
+    "asOf": "2026-08-26 16:05:35+08:00",
+    "retrievedAt": "2026-08-26T16:06:21+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
