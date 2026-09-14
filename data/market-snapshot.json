@@ -1,11 +1,11 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-09-14T22:16:50+08:00",
+  "generatedAt": "2026-09-15T02:40:16+08:00",
   "quote": {
     "value": 1.411,
     "source": "东方财富",
-    "asOf": "2026-09-14T22:13:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:07+08:00",
+    "asOf": "2026-09-15T02:38:12+08:00",
+    "retrievedAt": "2026-09-15T02:39:27+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -14,7 +14,7 @@
     "value": 1.411,
     "source": "腾讯行情",
     "asOf": "2026-09-14T16:14:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:07+08:00",
+    "retrievedAt": "2026-09-15T02:39:27+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -24,7 +24,7 @@
     "value": 1.4112,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-09-14 16:11:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:41+08:00",
+    "retrievedAt": "2026-09-15T02:40:06+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -33,7 +33,7 @@
     "value": -0.01,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-09-14 16:11:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:41+08:00",
+    "retrievedAt": "2026-09-15T02:40:06+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -42,7 +42,7 @@
     "value": 0.87,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-09-14 16:11:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:41+08:00",
+    "retrievedAt": "2026-09-15T02:40:06+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -51,20 +51,12 @@
     "value": 174878976.0,
     "source": "AKShare / 东方财富ETF行情",
     "asOf": "2026-09-14 16:11:57+08:00",
-    "retrievedAt": "2026-09-14T22:16:41+08:00",
+    "retrievedAt": "2026-09-15T02:40:06+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "daily": [
-    {
-      "time": "2024-01-22",
-      "open": 0.993,
-      "close": 0.969,
-      "high": 0.993,
-      "low": 0.96,
-      "volume": 241106
-    },
     {
       "time": "2024-01-23",
       "open": 0.959,
@@ -5179,10 +5171,10 @@
     },
     {
       "time": "2026-09-14",
-      "open": 1.4,
-      "close": 1.41,
-      "high": 1.42,
-      "low": 1.4,
+      "open": 1.402,
+      "close": 1.411,
+      "high": 1.416,
+      "low": 1.402,
       "volume": 1241085
     }
   ],
