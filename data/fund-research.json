@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-10-16T12:39:27+08:00",
+  "generatedAt": "2026-10-21T12:58:12+08:00",
   "fundCode": "008163",
   "targetEtf": "515450",
   "profile": {
@@ -19,28 +19,28 @@
     "dailyTrackingDeviationTarget": 0.35,
     "annualTrackingErrorTarget": 4.0,
     "latestNav": {
-      "value": 1.0731,
+      "value": 1.0764,
       "source": "东方财富历史净值（基金公司净值聚合）",
-      "asOf": "2026-10-15",
-      "retrievedAt": "2026-10-16T12:39:27+08:00",
+      "asOf": "2026-10-20",
+      "retrievedAt": "2026-10-21T12:58:12+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
     },
     "latestAccumulatedNav": {
-      "value": 1.7841,
+      "value": 1.7874,
       "source": "东方财富历史净值（基金公司净值聚合）",
-      "asOf": "2026-10-15",
-      "retrievedAt": "2026-10-16T12:39:27+08:00",
+      "asOf": "2026-10-20",
+      "retrievedAt": "2026-10-21T12:58:12+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
     },
     "latestNavChange": {
-      "value": -0.2973,
+      "value": -0.6919,
       "source": "东方财富历史净值（基金公司净值聚合）",
-      "asOf": "2026-10-15",
-      "retrievedAt": "2026-10-16T12:39:27+08:00",
+      "asOf": "2026-10-20",
+      "retrievedAt": "2026-10-21T12:58:12+08:00",
       "frequency": "daily",
       "quality": "verified",
       "pointInTimeSafe": true
@@ -8176,13 +8176,28 @@
       "time": "2026-10-15",
       "value": 1.0731,
       "accumulated": 1.7841
+    },
+    {
+      "time": "2026-10-16",
+      "value": 1.0749,
+      "accumulated": 1.7859
+    },
+    {
+      "time": "2026-10-19",
+      "value": 1.0839,
+      "accumulated": 1.7949
+    },
+    {
+      "time": "2026-10-20",
+      "value": 1.0764,
+      "accumulated": 1.7874
     }
   ],
   "trackingError": {
-    "value": 3.7536,
+    "value": 3.7433,
     "source": "008163净值 / 515450复权行情计算",
-    "asOf": "2026-10-15",
-    "retrievedAt": "2026-10-16T12:38:35+08:00",
+    "asOf": "2026-10-20",
+    "retrievedAt": "2026-10-21T12:57:21+08:00",
     "frequency": "daily",
     "quality": "verified",
     "pointInTimeSafe": true
