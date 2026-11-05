@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-11-05T04:27:31+08:00",
+  "generatedAt": "2026-11-05T23:00:20+08:00",
   "fundCode": "008163",
   "targetEtf": "515450",
   "history": [
@@ -361,6 +361,15 @@
       "source": "AKShare / 东方财富ETF行情",
       "asOf": "2026-11-04 16:11:50+08:00",
       "retrievedAt": "2026-11-05T04:27:23+08:00",
+      "quality": "verified",
+      "pointInTimeSafe": true
+    },
+    {
+      "date": "2026-11-05",
+      "value": 13895334912.0,
+      "source": "AKShare / 东方财富ETF行情",
+      "asOf": "2026-11-05 16:11:44+08:00",
+      "retrievedAt": "2026-11-05T23:00:09+08:00",
       "quality": "verified",
       "pointInTimeSafe": true
     }
