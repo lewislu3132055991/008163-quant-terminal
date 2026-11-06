@@ -1,39 +1,39 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-11-06T14:59:25+08:00",
+  "generatedAt": "2026-11-06T22:42:18+08:00",
   "quote": {
-    "value": 1.482,
+    "value": 1.484,
     "source": "东方财富",
-    "asOf": "2026-11-06T14:53:43+08:00",
-    "retrievedAt": "2026-11-06T14:55:49+08:00",
+    "asOf": "2026-11-06T22:34:45+08:00",
+    "retrievedAt": "2026-11-06T22:37:10+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "backupQuote": {
-    "value": 1.482,
+    "value": 1.484,
     "source": "腾讯行情",
-    "asOf": "2026-11-06T14:53:39+08:00",
-    "retrievedAt": "2026-11-06T14:55:49+08:00",
+    "asOf": "2026-11-06T16:14:51+08:00",
+    "retrievedAt": "2026-11-06T22:37:10+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "previousClose": 1.462,
   "iopv": {
-    "value": 1.4831,
+    "value": 1.4834,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-11-06 14:56:36+08:00",
-    "retrievedAt": "2026-11-06T14:59:14+08:00",
+    "asOf": "2026-11-06 16:11:39+08:00",
+    "retrievedAt": "2026-11-06T22:37:48+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
   },
   "premiumRate": {
-    "value": -0.07,
+    "value": 0.04,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-11-06 14:56:36+08:00",
-    "retrievedAt": "2026-11-06T14:59:14+08:00",
+    "asOf": "2026-11-06 16:11:39+08:00",
+    "retrievedAt": "2026-11-06T22:37:48+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": false
@@ -41,17 +41,17 @@
   "turnoverRate": {
     "value": 1.06,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-11-06 14:56:36+08:00",
-    "retrievedAt": "2026-11-06T14:59:14+08:00",
+    "asOf": "2026-11-06 16:11:39+08:00",
+    "retrievedAt": "2026-11-06T22:37:48+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
   },
   "amount": {
-    "value": 215198091.0,
+    "value": 217307199.0,
     "source": "AKShare / 东方财富ETF行情",
-    "asOf": "2026-11-06 14:56:36+08:00",
-    "retrievedAt": "2026-11-06T14:59:14+08:00",
+    "asOf": "2026-11-06 16:11:39+08:00",
+    "retrievedAt": "2026-11-06T22:37:48+08:00",
     "frequency": "realtime",
     "quality": "verified",
     "pointInTimeSafe": true
@@ -5183,20 +5183,10 @@
       "close": 1.48,
       "high": 1.49,
       "low": 1.46,
-      "volume": 1434521
+      "volume": 1473647
     }
   ],
   "intraday": [
-    {
-      "time": "2026-11-05T15:00:00+08:00",
-      "open": 1.463,
-      "close": 1.462,
-      "high": 1.463,
-      "low": 1.462,
-      "volume": 24094,
-      "vwap": 1.462,
-      "iopv": 1.462
-    },
     {
       "time": "2026-11-06T09:35:00+08:00",
       "open": 1.461,
@@ -5264,7 +5254,7 @@
       "high": 1.471,
       "low": 1.466,
       "volume": 26661,
-      "vwap": 1.465,
+      "vwap": 1.466,
       "iopv": 1.469
     },
     {
@@ -5294,7 +5284,7 @@
       "high": 1.474,
       "low": 1.468,
       "volume": 72819,
-      "vwap": 1.466,
+      "vwap": 1.467,
       "iopv": 1.474
     },
     {
@@ -5424,7 +5414,7 @@
       "high": 1.478,
       "low": 1.477,
       "volume": 7137,
-      "vwap": 1.468,
+      "vwap": 1.469,
       "iopv": 1.477
     },
     {
@@ -5494,7 +5484,7 @@
       "high": 1.481,
       "low": 1.478,
       "volume": 28260,
-      "vwap": 1.469,
+      "vwap": 1.47,
       "iopv": 1.48
     },
     {
@@ -5604,7 +5594,7 @@
       "high": 1.482,
       "low": 1.481,
       "volume": 18646,
-      "vwap": 1.473,
+      "vwap": 1.474,
       "iopv": 1.482
     },
     {
@@ -5614,7 +5604,7 @@
       "high": 1.483,
       "low": 1.481,
       "volume": 6103,
-      "vwap": 1.473,
+      "vwap": 1.474,
       "iopv": 1.482
     },
     {
@@ -5660,12 +5650,22 @@
     {
       "time": "2026-11-06T14:55:00+08:00",
       "open": 1.484,
-      "close": 1.483,
+      "close": 1.482,
       "high": 1.484,
       "low": 1.48,
-      "volume": 33630,
+      "volume": 38121,
       "vwap": 1.474,
-      "iopv": 1.483
+      "iopv": 1.482
+    },
+    {
+      "time": "2026-11-06T15:00:00+08:00",
+      "open": 1.483,
+      "close": 1.484,
+      "high": 1.485,
+      "low": 1.482,
+      "volume": 34665,
+      "vwap": 1.475,
+      "iopv": 1.484
     }
   ]
 }

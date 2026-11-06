@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-11-06T14:59:25+08:00",
+  "generatedAt": "2026-11-06T22:42:18+08:00",
   "completeness": 94,
   "quoteConflict": false,
   "shareHistoryDays": 42,
@@ -10,56 +10,56 @@
       "name": "东方财富行情",
       "status": "ok",
       "detail": "报价、成交额和换手率已更新",
-      "lastSuccess": "2026-11-06T14:53:43+08:00"
+      "lastSuccess": "2026-11-06T22:34:45+08:00"
     },
     {
       "id": "tencent",
       "name": "腾讯行情",
       "status": "ok",
       "detail": "独立备份报价已更新",
-      "lastSuccess": "2026-11-06T14:53:44+08:00"
+      "lastSuccess": "2026-11-06T22:34:46+08:00"
     },
     {
       "id": "nav",
       "name": "008163基金净值",
       "status": "ok",
       "detail": "单位净值历史已更新",
-      "lastSuccess": "2026-11-06T14:55:47+08:00"
+      "lastSuccess": "2026-11-06T22:37:07+08:00"
     },
     {
       "id": "benchmark",
       "name": "沪深300ETF行情",
       "status": "ok",
       "detail": "已切换腾讯沪深300ETF复权日线",
-      "lastSuccess": "2026-11-06T14:55:49+08:00"
+      "lastSuccess": "2026-11-06T22:37:09+08:00"
     },
     {
       "id": "announcements",
       "name": "ETF公告",
       "status": "ok",
       "detail": "ETF公告列表已更新",
-      "lastSuccess": "2026-11-06T14:55:49+08:00"
+      "lastSuccess": "2026-11-06T22:37:10+08:00"
     },
     {
       "id": "daily",
       "name": "515450复权日线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯复权日线",
-      "lastSuccess": "2026-11-06T14:53:46+08:00"
+      "lastSuccess": "2026-11-06T22:34:49+08:00"
     },
     {
       "id": "intraday",
       "name": "515450五分钟线",
       "status": "ok",
       "detail": "东方财富不可达，已切换腾讯五分钟线",
-      "lastSuccess": "2026-11-06T14:53:48+08:00"
+      "lastSuccess": "2026-11-06T22:34:50+08:00"
     },
     {
       "id": "akshare",
       "name": "AKShare扩展数据",
-      "status": "ok",
-      "detail": "IOPV、宏观利率与最新披露持仓已更新",
-      "lastSuccess": "2026-11-06T14:59:25+08:00"
+      "status": "delayed",
+      "detail": "部分扩展源失败：披露持仓：API Error: FundArchivesDatas request failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) (Status code: None)",
+      "lastSuccess": "2026-11-06T22:42:18+08:00"
     }
   ],
   "sourceMatrix": [
